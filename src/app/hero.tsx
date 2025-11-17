@@ -47,15 +47,10 @@ export function Hero() {
 
           <div className="mx-auto max-w-7xl px-6">
             <div className="text-center">
-              <TextEffect
-                preset="fade-in-blur"
-                speedSegment={0.3}
-                as="h1"
-                className="mx-auto mt-8 max-w-4xl text-balance text-5xl font-bold font-headline md:text-7xl lg:mt-16 xl:text-[5.25rem] text-primary"
-              >
+              <h1 className="mx-auto mt-8 max-w-4xl text-balance text-5xl font-bold font-headline md:text-7xl lg:mt-16 xl:text-[5.25rem] text-primary">
                 Restart Your Career &amp; Earn From Home With Digital &amp; AI
                 Skills
-              </TextEffect>
+              </h1>
               <TextEffect
                 per="line"
                 preset="fade-in-blur"
