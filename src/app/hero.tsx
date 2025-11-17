@@ -13,7 +13,6 @@ import {
   Award,
 } from 'lucide-react';
 import { AnimatedGroup } from '@/components/motion-primitives/animated-group';
-import { TextEffect } from '@/components/motion-primitives/text-effect';
 import Image from 'next/image';
 
 const transitionVariants = {
@@ -60,18 +59,13 @@ export function Hero() {
                 Restart Your Career &amp; Earn From Home With Digital &amp; AI
                 Skills
               </h1>
-              <TextEffect
-                per="line"
-                preset="fade-in-blur"
-                speedSegment={0.3}
-                delay={0.5}
-                as="p"
+              <p
                 className="mx-auto mt-8 max-w-2xl text-balance text-base text-muted-foreground md:text-lg"
               >
                 A trusted online learning platform for Indian women who want to
                 become financially independent — even if you have a career
                 break or are starting from zero.
-              </TextEffect>
+              </p>
 
               <AnimatedGroup
                 variants={{
