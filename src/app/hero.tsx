@@ -2,7 +2,16 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, BookOpen, GraduationCap, Users } from 'lucide-react';
+import {
+  ArrowRight,
+  BookOpen,
+  GraduationCap,
+  Users,
+  Smartphone,
+  Video,
+  HeartHandshake,
+  Award,
+} from 'lucide-react';
 import { AnimatedGroup } from '@/components/motion-primitives/animated-group';
 import { TextEffect } from '@/components/motion-primitives/text-effect';
 import Image from 'next/image';
@@ -124,6 +133,27 @@ export function Hero() {
                   </Button>
                 </div>
               </AnimatedGroup>
+              
+              <div className="mt-12 mx-auto max-w-5xl">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div className="flex items-center justify-center gap-2">
+                        <Smartphone className="h-5 w-5 text-accent"/>
+                        <span className="text-sm text-muted-foreground">Mobile Friendly</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                        <Video className="h-5 w-5 text-accent"/>
+                        <span className="text-sm text-muted-foreground">Video Lessons</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                        <HeartHandshake className="h-5 w-5 text-accent"/>
+                        <span className="text-sm text-muted-foreground">Women-Only Community</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                        <Award className="h-5 w-5 text-accent"/>
+                        <span className="text-sm text-muted-foreground">Certificates</span>
+                    </div>
+                </div>
+              </div>
             </div>
           </div>
 
