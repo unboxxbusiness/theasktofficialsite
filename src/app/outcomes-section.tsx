@@ -1,6 +1,7 @@
 'use client';
 
 import { CheckCircle, XCircle } from 'lucide-react';
+import Image from 'next/image';
 
 export function OutcomesSection() {
   const abilities = [
