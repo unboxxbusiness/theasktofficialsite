@@ -133,27 +133,6 @@ export function Hero() {
                   </Button>
                 </div>
               </AnimatedGroup>
-              
-              <div className="mt-12 mx-auto max-w-5xl">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                    <div className="flex items-center justify-center gap-2">
-                        <Smartphone className="h-5 w-5 text-accent"/>
-                        <span className="text-sm text-muted-foreground">Mobile Friendly</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <Video className="h-5 w-5 text-accent"/>
-                        <span className="text-sm text-muted-foreground">Video Lessons</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <HeartHandshake className="h-5 w-5 text-accent"/>
-                        <span className="text-sm text-muted-foreground">Women-Only Community</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <Award className="h-5 w-5 text-accent"/>
-                        <span className="text-sm text-muted-foreground">Certificates</span>
-                    </div>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -182,6 +161,41 @@ export function Hero() {
                 />
               </div>
             </div>
+          </AnimatedGroup>
+          
+          <AnimatedGroup
+                variants={{
+                  container: {
+                    visible: {
+                      transition: {
+                        staggerChildren: 0.1,
+                        delayChildren: 0.25,
+                      },
+                    },
+                  },
+                  ...transitionVariants,
+                }}
+              >
+          <div className="mt-12 mx-auto max-w-5xl">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+              <div className="flex items-center justify-center gap-2">
+                <Smartphone className="h-5 w-5 text-accent" />
+                <span className="text-sm text-muted-foreground">Mobile Friendly</span>
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <Video className="h-5 w-5 text-accent" />
+                <span className="text-sm text-muted-foreground">Video Lessons</span>
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <HeartHandshake className="h-5 w-5 text-accent" />
+                <span className="text-sm text-muted-foreground">Women-Only Community</span>
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <Award className="h-5 w-5 text-accent" />
+                <span className="text-sm text-muted-foreground">Certificates</span>
+              </div>
+            </div>
+          </div>
           </AnimatedGroup>
         </div>
       </section>
