@@ -56,7 +56,7 @@ export function Hero() {
 
           <div className="mx-auto max-w-7xl px-6">
             <div className="text-center">
-              <h1 className="mx-auto mt-8 max-w-4xl text-balance text-5xl font-bold font-headline md:text-7xl lg:mt-16 xl:text-[5.25rem] text-primary">
+              <h1 className="mx-auto mt-8 max-w-4xl text-balance text-4xl font-bold font-headline sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem] text-primary">
                 Restart Your Career &amp; Earn From Home With Digital &amp; AI
                 Skills
               </h1>
@@ -66,7 +66,7 @@ export function Hero() {
                 speedSegment={0.3}
                 delay={0.5}
                 as="p"
-                className="mx-auto mt-8 max-w-2xl text-balance text-lg text-muted-foreground"
+                className="mx-auto mt-8 max-w-2xl text-balance text-base text-muted-foreground md:text-lg"
               >
                 A trusted online learning platform for Indian women who want to
                 become financially independent — even if you have a career
