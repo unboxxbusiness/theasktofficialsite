@@ -5,6 +5,7 @@ import { Hero } from './hero';
 import { ProblemSection } from './problem-section';
 import { MissionSection } from './mission-section';
 import { ProgramSection } from './program-section';
+import { OutcomesSection } from './outcomes-section';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <ProblemSection />
         <MissionSection />
         <ProgramSection />
+        <OutcomesSection />
       </main>
     </>
   );
