@@ -1,5 +1,13 @@
-import { HomePage } from '@/components/pages/home/home-page';
+import { Header } from '@/components/header';
+import { Hero } from '@/components/pages/home/hero';
 
 export default function Home() {
-  return <HomePage />;
+  return (
+    <>
+      <Header />
+      <main>
+        <Hero />
+      </main>
+    </>
+  );
 }
