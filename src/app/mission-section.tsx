@@ -11,7 +11,7 @@ export function MissionSection() {
           <div className="lg:col-span-2">
             <div className="md:pr-6 lg:pr-0">
               <h2 className="text-4xl font-bold">
-                A Learning Trust Created For Women, With Women, By Women
+                A Learning Trust Created For Women
               </h2>
               <p className="mt-6 text-muted-foreground">
                 Theaskt.org is a public learning trust dedicated to empowering
