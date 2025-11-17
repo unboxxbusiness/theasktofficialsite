@@ -123,17 +123,6 @@ export function Hero() {
                     </Link>
                   </Button>
                 </div>
-                <Button
-                  key={2}
-                  asChild
-                  size="lg"
-                  variant="secondary"
-                  className="rounded-xl px-5"
-                >
-                  <Link href="#link">
-                    <span className="text-nowrap">Apply for Scholarship</span>
-                  </Link>
-                </Button>
               </AnimatedGroup>
             </div>
           </div>
