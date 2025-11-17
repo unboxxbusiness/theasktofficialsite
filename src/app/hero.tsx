@@ -81,26 +81,26 @@ export function Hero() {
                   },
                   ...transitionVariants,
                 }}
-                className="mt-12 mx-auto max-w-2xl grid gap-4 text-left"
+                className="mt-12 mx-auto grid max-w-4xl gap-4 text-left md:grid-cols-3"
               >
-                <div className="flex items-start gap-3">
-                  <BookOpen className="mt-1 h-5 w-5 flex-shrink-0 text-accent" />
-                  <span className="text-muted-foreground">
+                <div className="bg-muted/50 rounded-lg p-6">
+                  <BookOpen className="h-8 w-8 text-accent" />
+                  <p className="mt-4 text-muted-foreground">
                     Learn from your phone, step-by-step, in simple language
-                  </span>
+                  </p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <GraduationCap className="mt-1 h-5 w-5 flex-shrink-0 text-accent" />
-                  <span className="text-muted-foreground">
+                <div className="bg-muted/50 rounded-lg p-6">
+                  <GraduationCap className="h-8 w-8 text-accent" />
+                  <p className="mt-4 text-muted-foreground">
                     Free, Low-Cost &amp; Scholarship Seats Available
-                  </span>
+                  </p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Users className="mt-1 h-5 w-5 flex-shrink-0 text-accent" />
-                  <span className="text-muted-foreground">
+                <div className="bg-muted/50 rounded-lg p-6">
+                  <Users className="h-8 w-8 text-accent" />
+                  <p className="mt-4 text-muted-foreground">
                     For Homemakers, Students, Working Women &amp; Small
                     Business Owners
-                  </span>
+                  </p>
                 </div>
               </AnimatedGroup>
 
