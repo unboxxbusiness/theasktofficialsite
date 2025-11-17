@@ -7,9 +7,7 @@ export function HomePage() {
   return (
     <>
       <Header />
-      <main>
-        <Hero />
-      </main>
+      <Hero />
     </>
   );
 }
