@@ -1,23 +1,14 @@
-'use client';
-
-import { Header } from '@/components/header';
-import { Hero } from './hero';
-import { ProblemSection } from './problem-section';
-import { MissionSection } from './mission-section';
-import { ProgramSection } from './program-section';
-import { OutcomesSection } from './outcomes-section';
-
 export default function Home() {
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <ProblemSection />
-        <MissionSection />
-        <ProgramSection />
-        <OutcomesSection />
-      </main>
-    </>
+    <main className="flex min-h-screen flex-col items-center justify-center p-24">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          Let's build something great.
+        </h1>
+        <p className="mt-6 text-lg leading-8 text-gray-600">
+          I'm ready for your instructions.
+        </p>
+      </div>
+    </main>
   );
 }
