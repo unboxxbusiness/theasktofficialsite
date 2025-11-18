@@ -1,16 +1,17 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowRight, Star } from 'lucide-react'
+import { ArrowRight, Star, GraduationCap, Clock } from 'lucide-react'
 import DotPattern from '@/components/ui/dot-pattern'
 import { cn } from '@/lib/utils'
+import { Button } from '@/components/ui/button'
 
 export default function CtaSection() {
     return (
         <section className="py-16">
             <div className={cn(
                 "relative mx-auto max-w-5xl rounded-3xl border overflow-hidden",
-                "px-6 py-12 md:py-20 lg:py-32"
+                "px-6 py-12 md:py-20 lg:py-24"
             )}>
                 <DotPattern
                     width={20}
@@ -29,24 +30,32 @@ export default function CtaSection() {
                     <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-primary to-transparent" />
                 </div>
 
-                <div className="text-center relative z-10">
-                    <h2 className="text-balance text-4xl font-semibold lg:text-5xl flex items-center justify-center gap-3">
-                        <Star className="h-8 w-8 text-primary" />
-                        Your Skills Can Change Your Life.
-                    </h2>
-                    <p className="mt-4 text-muted-foreground">Imagine earning from home… supporting your family… feeling confident again.</p>
-                    <p className="mt-2 text-muted-foreground">This is your moment. Your journey matters. We are here to walk with you.</p>
+                <div className="text-center relative z-10 max-w-3xl mx-auto">
+                    <p className="text-lg text-muted-foreground">
+                        Your learning journey doesn’t end with one skill. This is your space to grow in every part of life.
+                    </p>
+                    <p className="mt-4 text-xl font-semibold text-foreground">
+                        Choose where you want to start:
+                    </p>
 
-                    <div className="mt-12 flex flex-wrap justify-center gap-4">
-                        <Link href="#" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 gap-2">
-                            Enroll in Digital & AI School
-                            <ArrowRight className="h-4 w-4" />
-                        </Link>
+                    <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                        <Button size="lg" asChild>
+                            <Link href="/digital-ai-school" className="gap-2">
+                                <GraduationCap className="h-5 w-5" />
+                                Enroll in Digital & AI School
+                            </Link>
+                        </Button>
+                        <Button size="lg" variant="secondary" asChild>
+                            <Link href="#" className="gap-2">
+                                <Clock className="h-5 w-5" />
+                                Join Waitlist for Upcoming Schools
+                            </Link>
+                        </Button>
                     </div>
 
                     <div className="mt-12 border-t border-dashed pt-8">
                         <blockquote className="text-lg italic text-muted-foreground">
-                            “The best time to plant a tree was 20 years ago. The second best time is now.”
+                            Your future has many chapters. Let’s learn, rise, and transform them together. 💛
                         </blockquote>
                     </div>
 
