@@ -5,6 +5,7 @@ import { Navbar } from "../pages/home/components/hero-section";
 import WhyTheasktExists from "../pages/about/components/why-theaskt-exists";
 import WhatMakesUsDifferent from "../pages/about/components/what-makes-us-different";
 import LearningEcosystem from "../pages/about/components/learning-ecosystem";
+import WhoWeServe from "../pages/about/components/who-we-serve";
 
 export default function AboutPage() {
   return (
@@ -17,6 +18,7 @@ export default function AboutPage() {
       <WhyTheasktExists />
       <WhatMakesUsDifferent />
       <LearningEcosystem />
+      <WhoWeServe />
       <Footer />
     </main>
   );
