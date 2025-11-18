@@ -6,6 +6,9 @@ import ProgramSection from "./pages/home/components/program-section";
 import OutcomesSection from "./pages/home/components/outcomes-section";
 import HowItWorksSection from "./pages/home/components/how-it-works-section";
 import FutureSchoolsSection from "./pages/home/components/future-schools-section";
+import FAQSection from "./pages/home/components/faq-section";
+import TestimonialsSection from "./pages/home/components/testimonials-section";
+import Footer from "./pages/home/components/footer";
 
 export default function Home() {
   return (
@@ -18,6 +21,9 @@ export default function Home() {
       <OutcomesSection />
       <HowItWorksSection />
       <FutureSchoolsSection />
+      <FAQSection />
+      <TestimonialsSection />
+      <Footer />
     </main>
   );
 }
