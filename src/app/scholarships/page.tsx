@@ -9,6 +9,7 @@ import ScholarshipUsage from "../pages/scholarships/components/scholarship-usage
 import WhoCanApply from "../pages/scholarships/components/who-can-apply";
 import HowToApply from "../pages/scholarships/components/how-to-apply";
 import Supporters from "../pages/scholarships/components/supporters";
+import ScholarshipFaq from "../pages/scholarships/components/scholarship-faq";
 
 export default function ScholarshipsPage() {
   return (
@@ -24,6 +25,7 @@ export default function ScholarshipsPage() {
       <WhoCanApply />
       <HowToApply />
       <Supporters />
+      <ScholarshipFaq />
       <CtaSection />
       <Footer />
     </main>
