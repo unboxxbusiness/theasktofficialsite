@@ -52,17 +52,7 @@ export default function HeroSection() {
           financially independent — even if you have a career break or are
           starting from zero.
         </motion.p>
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, delay: 0.9 }}
-            className="text-center mt-4 text-sm"
-        >
-            <p>💛 Learn from your phone, step-by-step, in simple language</p>
-            <p>🎓 Free, Low-Cost & Scholarship Seats Available</p>
-            <p>👩‍🦰 For Homemakers, Students, Working Women & Small Business Owners</p>
-        </motion.div>
-
+        
         <motion.div
           initial={{
             opacity: 0,

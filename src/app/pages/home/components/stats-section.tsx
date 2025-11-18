@@ -1,0 +1,30 @@
+export default function StatsSection() {
+    const stats = [
+        {
+            icon: "💛",
+            description: "Learn from your phone, step-by-step, in simple language",
+        },
+        {
+            icon: "🎓",
+            description: "Free, Low-Cost & Scholarship Seats Available",
+        },
+        {
+            icon: "👩‍🦰",
+            description: "For Homemakers, Students, Working Women & Small Business Owners",
+        }
+    ]
+    return (
+        <section className="py-12 md:py-20">
+            <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
+                <div className="grid gap-12 divide-y *:pt-12 *:text-center md:grid-cols-3 md:gap-2 md:divide-x md:divide-y-0 md:*:pt-0">
+                    {stats.map((stat, index) => (
+                        <div key={index} className="space-y-4 px-4">
+                            <div className="text-5xl font-bold">{stat.icon}</div>
+                            <p className="text-muted-foreground">{stat.description}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
+}

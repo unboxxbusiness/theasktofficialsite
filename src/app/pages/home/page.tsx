@@ -1,14 +1,11 @@
+import HeroSection from "./components/hero-section";
+import StatsSection from "./components/stats-section";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-          Let's build something great.
-        </h1>
-        <p className="mt-6 text-lg leading-8 text-gray-600">
-          I'm ready for your instructions.
-        </p>
-      </div>
+    <main className="flex min-h-screen flex-col items-center justify-center">
+      <HeroSection />
+      <StatsSection />
     </main>
   );
 }
