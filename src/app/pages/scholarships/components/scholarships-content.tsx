@@ -58,7 +58,7 @@ export default function ScholarshipsContent() {
             </p>
              <div className="mt-8">
                 <Button size="lg" asChild>
-                    <Link href="#" className="inline-flex items-center gap-2">
+                    <Link href="https://edu.theaskt.org/scholarship-application" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
                         Apply for a Scholarship
                         <ArrowRight className="h-4 w-4" />
                     </Link>

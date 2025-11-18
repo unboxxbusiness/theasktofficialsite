@@ -56,7 +56,7 @@ export default function HowToApply() {
               ))}
             </ol>
             <Button asChild className="mt-8 w-full" size="lg">
-              <Link href="#">
+              <Link href="https://edu.theaskt.org/scholarship-application" target="_blank" rel="noopener noreferrer">
                 Apply for Scholarship
                 <ArrowRight className="h-4 w-4 ml-2" />
               </Link>

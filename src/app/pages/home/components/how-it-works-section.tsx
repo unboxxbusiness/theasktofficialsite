@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { UserPlus, BookCheck, Clock, Award, Briefcase, ArrowRight } from "lucide-react";
 import React from "react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const features = [
   {
@@ -45,10 +46,12 @@ export default function HowItWorksSection() {
           ))}
         </div>
         <div className="text-center mt-16">
-            <Link href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-primary/90 transition-colors duration-300">
-                Start Your Learning Journey
-                <ArrowRight className="h-4 w-4" />
-            </Link>
+            <Button asChild size="lg">
+                <Link href="/digital-ai-school" className="inline-flex items-center gap-2">
+                    Start Your Learning Journey
+                    <ArrowRight className="h-4 w-4" />
+                </Link>
+            </Button>
         </div>
       </div>
     </section>

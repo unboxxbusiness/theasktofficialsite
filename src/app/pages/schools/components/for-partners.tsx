@@ -46,7 +46,7 @@ export default function ForPartners() {
 
           <div className="pt-6">
             <Button size="lg" asChild>
-              <Link href="#">
+              <Link href="/contact">
                 Partner With Us
                 <ArrowRight className="h-4 w-4 ml-2" />
               </Link>

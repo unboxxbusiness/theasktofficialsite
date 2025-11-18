@@ -2,6 +2,7 @@ import { CheckCircle, Globe, Users, Target } from "lucide-react";
 import Image from "next/image";
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 
 export default function DigitalAiSchoolContent() {
   const whoIsItFor = [
@@ -39,10 +40,12 @@ export default function DigitalAiSchoolContent() {
              The Digital & AI School is designed to give you the most in-demand skills for today's world. Whether you have a career gap, are a student, or want to upskill — this program is your launchpad to financial independence.
             </p>
              <div className="mt-8">
-                <Link href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-primary/90 transition-colors duration-300">
-                    Enroll Now and Start Learning
-                    <ArrowRight className="h-4 w-4" />
-                </Link>
+                <Button asChild size="lg">
+                    <Link href="https://edu.theaskt.org" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
+                        Enroll Now and Start Learning
+                        <ArrowRight className="h-4 w-4" />
+                    </Link>
+                </Button>
              </div>
           </div>
         </div>

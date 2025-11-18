@@ -50,7 +50,7 @@ export default function CommunityCta() {
 
           <div className="mt-12 flex flex-wrap justify-center gap-4">
             <Button size="lg" asChild>
-                <Link href="#">
+                <Link href="/digital-ai-school">
                     Join Theaskt Women’s Learning Community
                     <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>

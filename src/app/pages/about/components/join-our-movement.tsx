@@ -10,19 +10,19 @@ const actions = [
   {
     title: "Explore Our Digital & AI School",
     description: "Start learning practical skills for today's world.",
-    href: "#",
+    href: "/digital-ai-school",
     icon: <School />,
   },
   {
     title: "Apply for Scholarship",
     description: "Financial need should not be a barrier to education.",
-    href: "#",
+    href: "/scholarships",
     icon: <GraduationCap />,
   },
   {
     title: "Partner, Sponsor or Support",
     description: "Help us empower more women across India.",
-    href: "#",
+    href: "/contact",
     icon: <Handshake />,
   },
 ];

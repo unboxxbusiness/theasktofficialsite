@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   const title = "Restart Your Career & Earn From Home With Digital & AI Skills";
@@ -67,9 +68,11 @@ export default function HeroSection() {
           }}
           className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
         >
-          <button className="w-60 transform rounded-lg bg-primary px-6 py-3 font-medium text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90">
-            Enroll Now
-          </button>
+          <Button asChild size="lg">
+            <Link href="/digital-ai-school">
+                Enroll Now
+            </Link>
+          </Button>
         </motion.div>
         <motion.div
           initial={{
@@ -109,9 +112,11 @@ export const Navbar = () => {
         <div className="size-7 rounded-full bg-gradient-to-br from-primary via-accent to-secondary" />
         <h1 className="text-base font-bold md:text-2xl">TheAskt</h1>
       </Link>
-      <button className="transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">
-        Enroll Now
-      </button>
+      <Button asChild>
+        <Link href="/digital-ai-school">
+            Enroll Now
+        </Link>
+      </Button>
     </nav>
   );
 };

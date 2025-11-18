@@ -45,7 +45,7 @@ export default function Supporters() {
               </p>
               <div className="mt-6">
                  <Button asChild size="lg">
-                    <Link href="#">
+                    <Link href="/contact">
                     Become a Sponsor / Donor
                     <ArrowRight className="h-4 w-4 ml-2" />
                     </Link>

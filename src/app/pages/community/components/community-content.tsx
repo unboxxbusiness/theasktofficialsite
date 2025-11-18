@@ -40,7 +40,7 @@ export default function CommunityContent() {
             </p>
             <div className="mt-8">
                 <Button size="lg" asChild>
-                    <Link href="#" className="inline-flex items-center gap-2">
+                    <Link href="/digital-ai-school" className="inline-flex items-center gap-2">
                         Join Our Community
                         <ArrowRight className="h-4 w-4" />
                     </Link>

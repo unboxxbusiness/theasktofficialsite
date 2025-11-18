@@ -3,6 +3,7 @@ import React from "react";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 const modules = [
   {
@@ -94,13 +95,15 @@ export default function ProgramSection() {
       </div>
 
       <div className="text-center mt-16">
-        <Link
-          href="#"
-          className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-primary/90 transition-colors duration-300"
-        >
-          Enroll Now and Start Learning
-          <ArrowRight className="h-4 w-4" />
-        </Link>
+        <Button asChild size="lg">
+          <Link
+            href="/digital-ai-school"
+            className="inline-flex items-center gap-2"
+          >
+            Enroll Now and Start Learning
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </Button>
       </div>
     </section>
   );
