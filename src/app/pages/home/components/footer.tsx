@@ -36,10 +36,10 @@ export default function Footer() {
                     <div className="flex flex-col items-center md:items-start">
                         <h3 className="mb-4 text-lg font-semibold">Social Media</h3>
                         <div className="flex space-x-4">
-                            <Link href="#" className="text-muted-foreground hover:text-primary"><Youtube className="h-6 w-6" /></Link>
-                            <Link href="#" className="text-muted-foreground hover:text-primary"><Instagram className="h-6 w-6" /></Link>
-                            <Link href="#" className="text-muted-foreground hover:text-primary"><Linkedin className="h-6 w-6" /></Link>
-                            <Link href="#" className="text-muted-foreground hover:text-primary"><Facebook className="h-6 w-6" /></Link>
+                            <Link href="https://www.youtube.com/@theaskt" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Youtube className="h-6 w-6" /></Link>
+                            <Link href="https://www.instagram.com/the_askt/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Instagram className="h-6 w-6" /></Link>
+                            <Link href="https://www.linkedin.com/company/theaskt" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Linkedin className="h-6 w-6" /></Link>
+                            <Link href="https://www.facebook.com/theasktorg" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Facebook className="h-6 w-6" /></Link>
                             <Link href="#" className="text-muted-foreground hover:text-primary"><MessageCircle className="h-6 w-6" /></Link>
                         </div>
                     </div>
