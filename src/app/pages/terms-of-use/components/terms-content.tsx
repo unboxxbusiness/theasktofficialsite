@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function TermsContent() {
   return (
     <section className="py-16 md:py-24 w-full">
