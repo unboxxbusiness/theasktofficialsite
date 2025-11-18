@@ -15,7 +15,7 @@ export default function Footer() {
                     <div className="flex flex-col items-center md:items-start">
                         <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
                         <nav className="space-y-2 text-sm">
-                            <Link href="#" className="block transition-colors hover:text-primary">Enroll Now</Link>
+                            <Link href="/schools" className="block transition-colors hover:text-primary">Enroll Now</Link>
                             <Link href="/scholarships" className="block transition-colors hover:text-primary">Apply for Scholarship</Link>
                             <Link href="/digital-ai-school" className="block transition-colors hover:text-primary">Digital & AI School</Link>
                             <Link href="/about" className="block transition-colors hover:text-primary">About The Trust</Link>
