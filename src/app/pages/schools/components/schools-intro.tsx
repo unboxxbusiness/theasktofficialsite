@@ -6,13 +6,13 @@ export default function SchoolsIntro() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold">
-            India’s Most Impactful Learning Space for Women
+            A Growing Learning Universe for Women & Girls Across India
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground">
-            Theaskt.org is building a comprehensive learning ecosystem with multiple schools, each focusing on practical, life-changing skills. Our goal is to provide a complete growth journey, from foundational digital literacy to advanced professional skills.
+            Welcome to the Theaskt Schools Hub — the learning ecosystem designed to help women build skills, confidence, and financial independence.
           </p>
           <p className="text-lg md:text-xl font-semibold text-primary">
-            Find the right school to start your journey of growth and financial independence.
+            Start with our Digital & AI School or join the waitlists for upcoming schools. Your journey can begin from anywhere, even from your phone.
           </p>
         </div>
       </div>
