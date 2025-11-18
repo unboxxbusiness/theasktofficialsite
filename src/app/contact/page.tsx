@@ -1,7 +1,6 @@
 import Footer from "@/app/pages/home/components/footer";
 import { Navbar } from "../pages/home/components/hero-section";
 import ContactHero from "../pages/contact/components/contact-hero";
-import ContactContent from "../pages/contact/components/contact-content";
 import FaqSection from "../pages/home/components/faq-section";
 
 export default function ContactPage() {
@@ -11,7 +10,6 @@ export default function ContactPage() {
         <Navbar />
       </div>
       <ContactHero />
-      <ContactContent />
       <FaqSection />
       <Footer />
     </main>
