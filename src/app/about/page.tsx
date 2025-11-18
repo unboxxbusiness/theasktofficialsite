@@ -8,6 +8,7 @@ import LearningEcosystem from "../pages/about/components/learning-ecosystem";
 import WhoWeServe from "../pages/about/components/who-we-serve";
 import OurApproach from "../pages/about/components/our-approach";
 import OurVision from "../pages/about/components/our-vision";
+import JoinOurMovement from "../pages/about/components/join-our-movement";
 
 export default function AboutPage() {
   return (
@@ -23,6 +24,7 @@ export default function AboutPage() {
       <WhoWeServe />
       <OurApproach />
       <OurVision />
+      <JoinOurMovement />
       <Footer />
     </main>
   );
