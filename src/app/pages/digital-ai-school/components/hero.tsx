@@ -1,9 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Phone, Heart, Video, Users } from 'lucide-react';
 
 export default function DigitalAiSchoolHero() {
   const title = "DIGITAL & AI SCHOOL";
+  const features = [
+      { icon: <Phone className="h-5 w-5" />, text: "Learn from your phone" },
+      { icon: <Heart className="h-5 w-5" />, text: "Start from zero — no experience needed" },
+      { icon: <Video className="h-5 w-5" />, text: "Video lessons + mentorship + certificates" },
+      { icon: <Users className="h-5 w-5" />, text: "Safe, women-only learning community" },
+  ]
   return (
     <div className="relative mx-auto my-10 flex w-full max-w-7xl flex-col items-center justify-center">
       <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
@@ -44,10 +51,39 @@ export default function DigitalAiSchoolHero() {
             duration: 0.3,
             delay: 0.8,
           }}
-          className="relative z-10 mx-auto mt-4 max-w-xl py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-400"
+          className="relative z-10 mx-auto mt-4 max-w-2xl py-4 text-center text-lg font-semibold text-primary dark:text-primary-foreground"
         >
-          Learn Digital + AI Skills to Earn From Home. Restart Your Career.
+          Learn Skills to Earn From Home, Freelance, or Grow a Small Digital Business
         </motion.p>
+        <motion.p
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.3,
+            delay: 1.0,
+          }}
+          className="relative z-10 mx-auto mt-2 max-w-3xl text-center text-base font-normal text-neutral-600 dark:text-neutral-400"
+        >
+          A practical, beginner-friendly learning pathway designed for women and girls in India—especially those restarting their careers, returning after a break, or taking their first step into the digital world.
+        </motion.p>
+
+        <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, delay: 1.2 }}
+            className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto"
+        >
+            {features.map((feature, index) => (
+                <div key={index} className="flex items-center justify-center gap-2 p-3 rounded-lg bg-muted/50 border border-border/50">
+                    <div className="text-primary">{feature.icon}</div>
+                    <span className="text-sm font-medium text-foreground">{feature.text}</span>
+                </div>
+            ))}
+        </motion.div>
       </div>
     </div>
   );
