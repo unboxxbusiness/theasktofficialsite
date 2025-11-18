@@ -2,12 +2,34 @@
 
 import Link from 'next/link'
 import { ArrowRight, Star } from 'lucide-react'
+import DotPattern from '@/components/ui/dot-pattern'
+import { cn } from '@/lib/utils'
 
 export default function CtaSection() {
     return (
         <section className="py-16">
-            <div className="mx-auto max-w-5xl rounded-3xl border px-6 py-12 md:py-20 lg:py-32">
-                <div className="text-center">
+            <div className={cn(
+                "relative mx-auto max-w-5xl rounded-3xl border overflow-hidden",
+                "px-6 py-12 md:py-20 lg:py-32"
+            )}>
+                <DotPattern
+                    width={20}
+                    height={20}
+                    cx={1}
+                    cy={1}
+                    cr={1}
+                    className={cn(
+                        "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)]",
+                    )}
+                />
+                <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
+                    <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-primary to-transparent" />
+                </div>
+                <div className="absolute inset-y-0 right-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
+                    <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-primary to-transparent" />
+                </div>
+
+                <div className="text-center relative z-10">
                     <h2 className="text-balance text-4xl font-semibold lg:text-5xl flex items-center justify-center gap-3">
                         <Star className="h-8 w-8 text-primary" />
                         Your Skills Can Change Your Life.
