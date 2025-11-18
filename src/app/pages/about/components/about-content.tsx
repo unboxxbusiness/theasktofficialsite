@@ -17,7 +17,7 @@ export default function AboutContent() {
           <div>
             <div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
               <Image
-                src="https://picsum.photos/seed/about/800/600"
+                src="https://res.cloudinary.com/dhrigocvd/image/upload/v1762929280/About_Us_irj5yx.png"
                 alt="Diverse group of women learning"
                 width={800}
                 height={600}
