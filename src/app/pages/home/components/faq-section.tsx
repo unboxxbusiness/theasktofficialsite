@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import {
   Accordion,
   AccordionContent,
@@ -8,6 +7,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import { PhoneCall } from 'lucide-react'
+import Link from 'next/link'
 
 export default function FAQSection() {
   const faqItems = [
@@ -78,14 +78,17 @@ export default function FAQSection() {
                 about our platform, services, and features.
               </p>
             </div>
-            <Link href="#" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 gap-4">
-                Any questions? Reach out <PhoneCall className="w-4 h-4" />
+            <Link
+              href="#"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 gap-4 w-fit"
+            >
+              Any questions? Reach out <PhoneCall className="w-4 h-4" />
             </Link>
           </div>
           <Accordion type="single" collapsible className="w-full">
             {faqItems.map((item) => (
               <AccordionItem key={item.id} value={item.id}>
-                <AccordionTrigger>{item.question}</AccordionTrigger>
+                <AccordionTrigger className="text-left">{item.question}</AccordionTrigger>
                 <AccordionContent>{item.answer}</AccordionContent>
               </AccordionItem>
             ))}
