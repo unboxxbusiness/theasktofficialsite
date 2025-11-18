@@ -1,15 +1,17 @@
+import { GraduationCap, Smartphone, Users } from "lucide-react";
+
 export default function StatsSection() {
     const stats = [
         {
-            icon: "💛",
+            icon: <Smartphone className="mx-auto size-12 text-primary" />,
             description: "Learn from your phone, step-by-step, in simple language",
         },
         {
-            icon: "🎓",
+            icon: <GraduationCap className="mx-auto size-12 text-primary" />,
             description: "Free, Low-Cost & Scholarship Seats Available",
         },
         {
-            icon: "👩‍🦰",
+            icon: <Users className="mx-auto size-12 text-primary" />,
             description: "For Homemakers, Students, Working Women & Small Business Owners",
         }
     ]
