@@ -1,17 +1,47 @@
 "use client";
 
-import { Heart } from "lucide-react";
+import {
+  Heart,
+  Briefcase,
+  Home,
+  Users,
+  TrendingDown,
+  GraduationCap,
+  Building2,
+  BookOpen,
+} from "lucide-react";
 import React from "react";
 import { cn } from "@/lib/utils";
 
 const eligibilityCriteria = [
-  "You want to restart your career after a gap",
-  "You want to earn from home to support your family",
-  "You are a single mother, widow, or caregiver",
-  "Household income is limited or unstable",
-  "You are a student with financial constraints",
-  "You belong to rural/semi-urban/lower-income communities",
-  "You want to learn but cannot afford course fees",
+  {
+    text: "You want to restart your career after a gap",
+    icon: <Briefcase />,
+  },
+  {
+    text: "You want to earn from home to support your family",
+    icon: <Home />,
+  },
+  {
+    text: "You are a single mother, widow, or caregiver",
+    icon: <Users />,
+  },
+  {
+    text: "Household income is limited or unstable",
+    icon: <TrendingDown />,
+  },
+  {
+    text: "You are a student with financial constraints",
+    icon: <GraduationCap />,
+  },
+  {
+    text: "You belong to rural/semi-urban/lower-income communities",
+    icon: <Building2 />,
+  },
+  {
+    text: "You want to learn but cannot afford course fees",
+    icon: <BookOpen />,
+  },
 ];
 
 export default function WhoCanApply() {
@@ -26,21 +56,34 @@ export default function WhoCanApply() {
             You are encouraged to apply if any of these describe you:
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative z-10 max-w-7xl mx-auto">
-            {eligibilityCriteria.map((item, index) => (
-                <Feature key={index} text={item} index={index} icon={<Heart />} />
-            ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto">
+          {eligibilityCriteria.map((item, index) => (
+            <Feature key={index} text={item.text} icon={item.icon} index={index} />
+          ))}
+           <div
+              className={cn(
+                "flex flex-col items-center justify-center text-center lg:border-r py-10 relative group/feature dark:border-neutral-800",
+                "lg:border-b dark:border-neutral-800"
+              )}
+            >
+              <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
+              <div className="mb-4 relative z-10 px-10 text-primary">
+                 <Heart className="h-8 w-8" />
+              </div>
+              <p className="text-sm font-semibold text-foreground max-w-xs relative z-10 px-10">
+                And anyone with a strong desire to learn & grow
+              </p>
+            </div>
         </div>
         <div className="text-center mt-12">
-            <p className="text-lg font-semibold italic text-foreground max-w-3xl mx-auto">
-                No judgment. No shame. Your courage deserves support.
-            </p>
+          <p className="text-lg font-semibold italic text-foreground max-w-3xl mx-auto">
+            No judgment. No shame. Your courage deserves support.
+          </p>
         </div>
       </div>
     </section>
   );
 }
-
 
 const Feature = ({
   text,
@@ -54,22 +97,27 @@ const Feature = ({
   return (
     <div
       className={cn(
-        "flex flex-col lg:border-r py-10 relative group/feature dark:border-neutral-800",
-        (index === 0 || index === 3 || index === 6) && "lg:border-l dark:border-neutral-800",
+        "flex flex-col lg:border-r  py-10 relative group/feature dark:border-neutral-800",
+        (index === 0 || index === 4) && "lg:border-l dark:border-neutral-800",
         index < 4 && "lg:border-b dark:border-neutral-800"
       )}
     >
+      {index < 4 && (
         <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
+      )}
+      {index >= 4 && (
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
+      )}
       <div className="mb-4 relative z-10 px-10 text-primary">
         {React.cloneElement(icon as React.ReactElement, {
-            className: "h-8 w-8",
+          className: "h-8 w-8",
         })}
       </div>
       <div className="text-lg font-bold mb-2 relative z-10 px-10">
         <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-300 dark:bg-neutral-700 group-hover/feature:bg-accent transition-all duration-200 origin-center" />
-        <p className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-foreground text-left">
+        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-foreground text-left">
           {text}
-        </p>
+        </span>
       </div>
     </div>
   );
