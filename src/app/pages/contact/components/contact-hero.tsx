@@ -46,7 +46,7 @@ export default function ContactHero() {
           }}
           className="relative z-10 mx-auto mt-4 max-w-2xl py-4 text-center text-lg font-semibold text-primary dark:text-primary-foreground"
         >
-          We are here to help. Reach out with your questions, feedback, or partnership ideas.
+          We’re here to support your learning & growth journey.
         </motion.p>
       </div>
     </div>
