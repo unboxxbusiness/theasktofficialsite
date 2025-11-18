@@ -1,47 +1,75 @@
 "use client";
 
-import { CheckCircle } from "lucide-react";
+import {
+  CheckCircle,
+  PiggyBank,
+  HeartHandshake,
+  BookUser,
+  HeartPulse,
+  Users,
+  Briefcase,
+  Sparkles,
+} from "lucide-react";
+import Image from "next/image";
+import React from "react";
 
 export default function WhyMultipleSchools() {
   const points = [
-    "Skills for income",
-    "Understanding legal & financial rights",
-    "Confidence, mental & emotional empowerment",
-    "Health & well-being",
-    "Family & parenting",
-    "Business & leadership",
+    { text: "Skills for income", icon: <PiggyBank className="size-5" /> },
+    {
+      text: "Understanding legal & financial rights",
+      icon: <BookUser className="size-5" />,
+    },
+    {
+      text: "Confidence, mental & emotional empowerment",
+      icon: <Sparkles className="size-5" />
+    },
+    { text: "Health & well-being", icon: <HeartPulse className="size-5" /> },
+    { text: "Family & parenting", icon: <Users className="size-5" /> },
+    { text: "Business & leadership", icon: <Briefcase className="size-5" /> },
   ];
 
   return (
     <section className="py-16 md:py-24 w-full bg-muted">
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Why Multiple Schools?
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Because a woman’s growth is not one-dimensional.
-          </p>
-          <p className="text-lg font-semibold text-foreground">
-            She deserves support in:
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 pt-6 max-w-2xl mx-auto">
-            {points.map((point, index) => (
-              <div
-                key={index}
-                className="flex items-center space-x-3 p-3 rounded-lg bg-background border"
-              >
-                <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                <span className="text-foreground text-left text-sm font-medium">
-                  {point}
-                </span>
-              </div>
-            ))}
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="grid items-center gap-12 md:grid-cols-2 md:gap-12 lg:grid-cols-5 lg:gap-24">
+          <div className="lg:col-span-2">
+            <div className="md:pr-6 lg:pr-0">
+              <h2 className="text-4xl font-semibold lg:text-5xl">
+                Why Multiple Schools?
+              </h2>
+              <p className="mt-6 text-muted-foreground">
+                Because a woman’s growth is not one-dimensional. She deserves
+                support in every area of her life.
+              </p>
+            </div>
+            <ul className="mt-8 divide-y border-y">
+              {points.map((point) => (
+                <li
+                  key={point.text}
+                  className="flex items-center gap-4 py-3"
+                >
+                  <div className="text-primary">{point.icon}</div>
+                  <span className="font-medium">{point.text}</span>
+                </li>
+              ))}
+            </ul>
+             <p className="mt-8 text-lg font-bold text-primary">
+                Theaskt Schools are built to support the whole woman — not just
+                her career.
+            </p>
           </div>
-          <p className="text-lg font-bold text-primary pt-6">
-            Theaskt Schools are built to support the whole woman — not just her
-            career.
-          </p>
+          <div className="border-border/50 relative rounded-3xl border p-3 lg:col-span-3">
+            <div className="aspect-[4/3] relative rounded-2xl">
+              <Image
+                src="https://picsum.photos/seed/holistic-growth/1200/900"
+                className="rounded-[15px] object-cover"
+                alt="Holistic growth illustration"
+                fill
+                data-ai-hint="holistic growth empowerment"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
