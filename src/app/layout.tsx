@@ -3,6 +3,7 @@ import './globals.css';
 import ScrollToTopButton from '@/components/ui/scroll-to-top-button';
 import SocialLinks, { SocialLink } from '@/components/ui/social-links';
 import { Analytics } from '@/components/analytics';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const socialLinks: SocialLink[] = [
   { platform: 'linkedin', href: 'https://www.linkedin.com/company/theaskt' },
@@ -101,7 +102,7 @@ export default function RootLayout({
 
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -116,10 +117,17 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased">
-        <Analytics />
-        <SocialLinks links={socialLinks} />
-        {children}
-        <ScrollToTopButton />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Analytics />
+          <SocialLinks links={socialLinks} />
+          {children}
+          <ScrollToTopButton />
+        </ThemeProvider>
       </body>
     </html>
   );

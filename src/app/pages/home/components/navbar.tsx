@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
 import React from "react";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export const Navbar = () => {
   const navLinks = [
@@ -30,7 +31,8 @@ export const Navbar = () => {
             </Link>
         ))}
       </div>
-      <div className="hidden md:block">
+      <div className="hidden md:flex items-center gap-2">
+        <ThemeToggle />
         <Button asChild>
             <Link href="https://edu.theaskt.org" target="_blank" rel="noopener noreferrer">
                 Enroll Now
@@ -39,7 +41,8 @@ export const Navbar = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <div className="md:hidden">
+      <div className="md:hidden flex items-center gap-2">
+        <ThemeToggle />
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="ghost" size="icon">
