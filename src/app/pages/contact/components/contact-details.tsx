@@ -2,6 +2,7 @@
 
 import { Mail, MessageSquare, Handshake, Share2, Youtube, Instagram, Linkedin, Facebook, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
+import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
 
 export default function ContactDetails() {
   return (
@@ -26,7 +27,11 @@ export default function ContactDetails() {
               We reply within 24–72 hours (Mon–Sat).
             </p>
           </div>
-          <div className="bg-background p-8 rounded-lg border flex flex-col">
+          <HoverBorderGradient
+            containerClassName="rounded-lg"
+            as="div"
+            className="bg-background p-8 rounded-lg flex flex-col"
+          >
             <div className="flex items-center gap-4 mb-4">
               <MessageSquare className="h-8 w-8 text-primary" />
               <h3 className="text-2xl font-semibold">WhatsApp Support</h3>
@@ -38,7 +43,7 @@ export default function ContactDetails() {
             <p className="text-sm text-muted-foreground mt-2">
               A dedicated WhatsApp learning & helpdesk channel.
             </p>
-          </div>
+          </HoverBorderGradient>
            <div className="bg-background p-8 rounded-lg border flex flex-col">
             <div className="flex items-center gap-4 mb-4">
               <Handshake className="h-8 w-8 text-primary" />
