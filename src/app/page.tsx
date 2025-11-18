@@ -2,6 +2,7 @@ import HeroSection from "./pages/home/components/hero-section";
 import ProblemSection from "./pages/home/components/problem-section";
 import StatsSection from "./pages/home/components/stats-section";
 import FeaturesSection from "./pages/home/components/features-section";
+import ProgramSection from "./pages/home/components/program-section";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <StatsSection />
       <ProblemSection />
       <FeaturesSection />
+      <ProgramSection />
     </main>
   );
 }
