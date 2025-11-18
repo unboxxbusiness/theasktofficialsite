@@ -16,20 +16,20 @@ export default function Footer() {
                         <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
                         <nav className="space-y-2 text-sm">
                             <Link href="#" className="block transition-colors hover:text-primary">Enroll Now</Link>
-                            <Link href="#" className="block transition-colors hover:text-primary">Apply for Scholarship</Link>
-                            <Link href="#" className="block transition-colors hover:text-primary">Digital & AI School</Link>
-                            <Link href="#" className="block transition-colors hover:text-primary">About The Trust</Link>
-                            <Link href="#" className="block transition-colors hover:text-primary">Community</Link>
-                            <Link href="#" className="block transition-colors hover:text-primary">Contact</Link>
+                            <Link href="/scholarships" className="block transition-colors hover:text-primary">Apply for Scholarship</Link>
+                            <Link href="/digital-ai-school" className="block transition-colors hover:text-primary">Digital & AI School</Link>
+                            <Link href="/about" className="block transition-colors hover:text-primary">About The Trust</Link>
+                            <Link href="/community" className="block transition-colors hover:text-primary">Community</Link>
+                            <Link href="/contact" className="block transition-colors hover:text-primary">Contact</Link>
                         </nav>
                     </div>
 
                     <div className="flex flex-col items-center md:items-start">
                         <h3 className="mb-4 text-lg font-semibold">Policies</h3>
                         <nav className="space-y-2 text-sm">
-                            <Link href="#" className="block transition-colors hover:text-primary">Privacy Policy</Link>
-                            <Link href="#" className="block transition-colors hover:text-primary">Terms of Use</Link>
-                            <Link href="#" className="block transition-colors hover:text-primary">Refund Policy</Link>
+                            <Link href="/privacy-policy" className="block transition-colors hover:text-primary">Privacy Policy</Link>
+                            <Link href="/terms-of-use" className="block transition-colors hover:text-primary">Terms of Use</Link>
+                            <Link href="/refund-policy" className="block transition-colors hover:text-primary">Refund Policy</Link>
                         </nav>
                     </div>
 
