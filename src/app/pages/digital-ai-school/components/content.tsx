@@ -21,7 +21,7 @@ export default function DigitalAiSchoolContent() {
           <div>
             <div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
               <Image
-                src="https://picsum.photos/seed/digital-school/800/600"
+                src="https://res.cloudinary.com/dhrigocvd/image/upload/v1762928755/digital_and_ai_school_w77ged.png"
                 alt="Women learning on laptops"
                 width={800}
                 height={600}
