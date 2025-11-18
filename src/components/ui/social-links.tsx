@@ -169,7 +169,7 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
 
       {/* ===== Mobile Floating Dock ===== */}
       {showOnMobile && (
-        <div className="lg:hidden fixed bottom-6 right-6 z-50">
+        <div className="lg:hidden fixed bottom-6 left-6 z-50">
           {mobileDockOpen && (
             <div
               className="fixed inset-0 bg-[hsl(var(--background)/0.6)] backdrop-blur-sm"
@@ -180,7 +180,7 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
           <div className="relative">
             {/* Floating Icons */}
             <div
-              className={`absolute bottom-20 right-0 flex flex-col-reverse gap-3 transition-all duration-500 ${
+              className={`absolute bottom-20 left-0 flex flex-col-reverse gap-3 transition-all duration-500 ${
                 mobileDockOpen
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8 pointer-events-none"
@@ -196,7 +196,7 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
                     href={href}
                     target="_blank"
                     rel="noreferrer"
-                    className="group relative ml-auto"
+                    className="group relative mr-auto"
                     style={{
                       transitionDelay: mobileDockOpen ? `${index * 50}ms` : "0ms",
                     }}
@@ -210,12 +210,12 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
                     </div>
 
                     {/* Tooltip */}
-                    <div className="absolute top-1/2 -translate-y-1/2 right-16
+                    <div className="absolute top-1/2 -translate-y-1/2 left-16
                                     bg-[hsl(var(--popover))] text-[hsl(var(--popover-foreground))]
                                     text-xs font-medium px-3 py-1.5 rounded-md shadow-md
                                     opacity-0 group-hover:opacity-100 transition-opacity">
                       {style.label}
-                      <div className="absolute top-1/2 -translate-y-1/2 -right-1 w-2 h-2 bg-[hsl(var(--popover))] rotate-45" />
+                      <div className="absolute top-1/2 -translate-y-1/2 -left-1 w-2 h-2 bg-[hsl(var(--popover))] rotate-45" />
                     </div>
                   </a>
                 );
