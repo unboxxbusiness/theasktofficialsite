@@ -1,8 +1,5 @@
-import { GraduationCap, Heart, Users } from "lucide-react";
+import { Users } from "lucide-react";
 import Image from "next/image";
-import Link from 'next/link';
-import { ArrowRight, Store, Briefcase, Handshake } from 'lucide-react';
-import { Button } from "@/components/ui/button";
 
 export default function CommunityContent() {
 
@@ -23,21 +20,13 @@ export default function CommunityContent() {
             </div>
           </div>
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold">You Are Not Alone on This Journey</h2>
-             <p className="mt-4 text-lg font-semibold text-primary">
-                Learning is better, together.
+            <h2 className="text-3xl md:text-4xl font-bold">A Safe Space to Learn, Connect & Grow Together</h2>
+            <p className="text-lg text-muted-foreground">
+              At Theaskt.org, we believe women rise higher when they rise together. Our community is a supportive, respectful, and inspiring space where women from different parts of India learn digital & AI skills, share progress, ask questions, and encourage one another.
             </p>
             <p className="text-lg text-muted-foreground">
-              Theaskt Community is a private, women-only space where you can connect with fellow learners, share experiences, ask questions, and grow with the support of a sisterhood. It’s where learning transforms into confidence, and connections turn into lifelong friendships.
+              This is not just another online group. It is a sisterhood of learning, confidence, and financial independence.
             </p>
-             <div className="mt-8">
-                <Button size="lg" asChild>
-                    <Link href="#" className="inline-flex items-center gap-2">
-                        Join the Community
-                        <ArrowRight className="h-4 w-4" />
-                    </Link>
-                </Button>
-             </div>
           </div>
         </div>
 
