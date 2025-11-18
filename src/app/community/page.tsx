@@ -6,8 +6,6 @@ import CommunityContent from "../pages/community/components/community-content";
 import CommunityActivities from "../pages/community/components/community-activities";
 import CommunityFeatures from "../pages/community/components/community-features";
 import CommunityGuidelines from "../pages/community/components/community-guidelines";
-import FaqSection from "../pages/home/components/faq-section";
-
 
 export default function CommunityPage() {
   return (
@@ -20,7 +18,6 @@ export default function CommunityPage() {
       <CommunityActivities />
       <CommunityFeatures />
       <CommunityGuidelines />
-      <FaqSection />
       <CtaSection />
       <Footer />
     </main>
