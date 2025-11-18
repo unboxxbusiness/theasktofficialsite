@@ -3,6 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import { Menu, X } from "lucide-react";
+import React from "react";
 
 export const Navbar = () => {
   const navLinks = [
@@ -18,6 +21,8 @@ export const Navbar = () => {
       <Link href="/" className="flex items-center gap-2">
         <Image src="https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png" alt="TheAskt Logo" width={120} height={30} />
       </Link>
+      
+      {/* Desktop Navigation */}
       <div className="hidden md:flex items-center gap-6">
         {navLinks.map(link => (
             <Link key={link.href} href={link.href} className="text-sm font-semibold text-foreground hover:text-primary transition-colors">
@@ -25,11 +30,58 @@ export const Navbar = () => {
             </Link>
         ))}
       </div>
-      <Button asChild>
-        <Link href="/digital-ai-school">
-            Enroll Now
-        </Link>
-      </Button>
+      <div className="hidden md:block">
+        <Button asChild>
+            <Link href="/digital-ai-school">
+                Enroll Now
+            </Link>
+        </Button>
+      </div>
+
+      {/* Mobile Navigation */}
+      <div className="md:hidden">
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button variant="ghost" size="icon">
+              <Menu className="h-6 w-6" />
+              <span className="sr-only">Open menu</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background p-0">
+            <div className="flex flex-col h-full">
+              <div className="flex items-center justify-between border-b px-6 py-4">
+                 <Link href="/" className="flex items-center gap-2">
+                    <Image src="https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png" alt="TheAskt Logo" width={120} height={30} />
+                </Link>
+                <SheetClose asChild>
+                   <Button variant="ghost" size="icon">
+                    <X className="h-6 w-6" />
+                    <span className="sr-only">Close menu</span>
+                  </Button>
+                </SheetClose>
+              </div>
+              <div className="flex flex-col p-6 space-y-4">
+                {navLinks.map((link) => (
+                  <SheetClose asChild key={link.href}>
+                    <Link href={link.href} className="text-lg font-medium text-foreground hover:text-primary transition-colors">
+                      {link.label}
+                    </Link>
+                  </SheetClose>
+                ))}
+              </div>
+              <div className="mt-auto p-6">
+                <SheetClose asChild>
+                    <Button asChild className="w-full" size="lg">
+                        <Link href="/digital-ai-school">
+                            Enroll Now
+                        </Link>
+                    </Button>
+                </SheetClose>
+              </div>
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
     </nav>
   );
 };
