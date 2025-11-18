@@ -5,10 +5,22 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { cn } from "@/lib/utils";
 
 export const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
@@ -18,7 +30,11 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="flex w-full items-center justify-between border-b border-t border-neutral-200 px-4 py-4 dark:border-neutral-800">
+    <nav className={cn(
+      "w-full flex items-center justify-between px-4 py-4 transition-all duration-300",
+      "fixed top-0 left-1/2 -translate-x-1/2 z-50 max-w-7xl",
+      scrolled ? "mt-2 rounded-xl border bg-background/80 shadow-md backdrop-blur-lg" : "bg-transparent"
+    )}>
       <Link href="/" className="flex items-center gap-2">
         <Image src="https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png" alt="TheAskt Logo" width={120} height={30} className="dark:hidden" />
         <Image src="https://res.cloudinary.com/dhrigocvd/image/upload/v1762930767/ask_foundation_final_logo2_tqznhh.png" alt="TheAskt Logo" width={120} height={30} className="hidden dark:block" />

@@ -1,5 +1,4 @@
 import Footer from "@/app/pages/home/components/footer";
-import { Navbar } from "../pages/home/components/navbar";
 import CommunityHero from "../pages/community/components/community-hero";
 import CommunityContent from "../pages/community/components/community-content";
 import CommunityActivities from "../pages/community/components/community-activities";
@@ -15,10 +14,7 @@ export const metadata: Metadata = {
 
 export default function CommunityPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center">
-      <div className="w-full max-w-7xl">
-        <Navbar />
-      </div>
+    <main className="flex min-h-screen flex-col items-center pt-24">
       <CommunityHero />
       <CommunityContent />
       <CommunityActivities />

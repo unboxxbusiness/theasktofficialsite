@@ -4,6 +4,7 @@ import ScrollToTopButton from '@/components/ui/scroll-to-top-button';
 import SocialLinks, { SocialLink } from '@/components/ui/social-links';
 import { Analytics } from '@/components/analytics';
 import { ThemeProvider } from '@/components/theme-provider';
+import { Navbar } from './pages/home/components/navbar';
 
 const socialLinks: SocialLink[] = [
   { platform: 'linkedin', href: 'https://www.linkedin.com/company/theaskt' },
@@ -124,6 +125,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Analytics />
+          <Navbar />
           <SocialLinks links={socialLinks} />
           {children}
           <ScrollToTopButton />

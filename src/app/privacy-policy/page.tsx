@@ -1,5 +1,4 @@
 import Footer from "@/app/pages/home/components/footer";
-import { Navbar } from "../pages/home/components/navbar";
 import PrivacyHero from "../pages/privacy-policy/components/privacy-hero";
 import PrivacyContent from "../pages/privacy-policy/components/privacy-content";
 import { Metadata } from 'next';
@@ -12,10 +11,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center">
-      <div className="w-full max-w-7xl">
-        <Navbar />
-      </div>
+    <main className="flex min-h-screen flex-col items-center pt-24">
       <PrivacyHero />
       <PrivacyContent />
       <Footer />

@@ -1,5 +1,4 @@
 import Footer from "@/app/pages/home/components/footer";
-import { Navbar } from "../pages/home/components/navbar";
 import DigitalAiSchoolHero from "../pages/digital-ai-school/components/hero";
 import DigitalAiSchoolContent from "../pages/digital-ai-school/components/content";
 import HowItWorksSection from "../pages/home/components/how-it-works-section";
@@ -20,10 +19,7 @@ export const metadata: Metadata = {
 
 export default function DigitalAiSchoolPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center">
-      <div className="w-full max-w-7xl">
-        <Navbar />
-      </div>
+    <main className="flex min-h-screen flex-col items-center pt-24">
       <DigitalAiSchoolHero />
       <DigitalAiSchoolContent />
       <WhyDigitalAiSkills />

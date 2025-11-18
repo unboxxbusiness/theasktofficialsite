@@ -1,5 +1,4 @@
 import Footer from "@/app/pages/home/components/footer";
-import { Navbar } from "../pages/home/components/navbar";
 import SchoolsHero from "../pages/schools/components/schools-hero";
 import SchoolsIntro from "../pages/schools/components/schools-intro";
 import SchoolsList from "../pages/schools/components/schools-list";
@@ -20,10 +19,7 @@ export const metadata: Metadata = {
 
 export default function SchoolsPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center">
-      <div className="w-full max-w-7xl">
-        <Navbar />
-      </div>
+    <main className="flex min-h-screen flex-col items-center pt-24">
       <SchoolsHero />
       <SchoolsIntro />
       <MissionSection />
