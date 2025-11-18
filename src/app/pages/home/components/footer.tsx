@@ -5,14 +5,14 @@ export default function Footer() {
     return (
         <footer className="w-full border-t bg-background text-foreground">
             <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
-                <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                <div className="grid gap-12 text-center md:text-left sm:grid-cols-2 md:grid-cols-4">
                     
-                    <div>
+                    <div className="flex flex-col items-center md:items-start">
                         <h3 className="mb-4 text-lg font-bold">Theaskt.org</h3>
                         <p className="text-sm text-muted-foreground">A Learning Trust for Women</p>
                     </div>
 
-                    <div>
+                    <div className="flex flex-col items-center md:items-start">
                         <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
                         <nav className="space-y-2 text-sm">
                             <Link href="#" className="block transition-colors hover:text-primary">Enroll Now</Link>
@@ -24,7 +24,7 @@ export default function Footer() {
                         </nav>
                     </div>
 
-                    <div>
+                    <div className="flex flex-col items-center md:items-start">
                         <h3 className="mb-4 text-lg font-semibold">Policies</h3>
                         <nav className="space-y-2 text-sm">
                             <Link href="#" className="block transition-colors hover:text-primary">Privacy Policy</Link>
@@ -33,7 +33,7 @@ export default function Footer() {
                         </nav>
                     </div>
 
-                    <div>
+                    <div className="flex flex-col items-center md:items-start">
                         <h3 className="mb-4 text-lg font-semibold">Social Media</h3>
                         <div className="flex space-x-4">
                             <Link href="#" className="text-muted-foreground hover:text-primary"><Youtube className="h-6 w-6" /></Link>
