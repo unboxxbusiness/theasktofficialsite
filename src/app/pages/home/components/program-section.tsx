@@ -1,132 +1,106 @@
 "use client";
-import Image from "next/image";
-import React, { useState } from "react";
-import { ArrowRight, Globe } from "lucide-react";
+import React from "react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
 
-const accordionItems = [
+const modules = [
   {
-    id: 1,
-    title: "Social Media Marketing",
-    imageUrl: "https://picsum.photos/seed/accordion1/400/450",
-    imageHint: "social media",
+    title: "MODULE 1: Digital Confidence & Online Work Basics",
+    badge: "Foundations",
+    points: [
+      "Using smartphone for professional tasks",
+      "Online safety & scam protection",
+      "Digital identity, payments & tools",
+      "Women & financial independence",
+    ],
   },
   {
-    id: 2,
-    title: "AI Business Tools",
-    imageUrl: "https://picsum.photos/seed/accordion2/400/450",
-    imageHint: "ai tools",
+    title: "MODULE 2: Social Media + Digital Marketing",
+    badge: "Marketing",
+    points: [
+      "Instagram, Facebook, WhatsApp business",
+      "Content strategy & posting plans",
+      "Canva design for creatives",
+      "Business branding for beginners",
+    ],
   },
   {
-    id: 3,
-    title: "Canva & Content Creation",
-    imageUrl: "https://picsum.photos/seed/accordion3/400/450",
-    imageHint: "content creation",
+    title: "MODULE 3: AI Tools to Work Smarter",
+    badge: "AI Skills",
+    points: [
+      "Use AI for: Content writing, Image design, Video creation, Research & planning",
+      "Tools: ChatGPT, Canva AI, CapCut, Notion AI, etc.",
+    ],
   },
   {
-    id: 4,
-    title: "Freelancing & Projects",
-    imageUrl: "https://picsum.photos/seed/accordion4/400/450",
-    imageHint: "freelancing laptop",
+    title: "MODULE 4: Content Creation & Canva for Women",
+    badge: "Content",
+    points: [
+      "Carousel posts, reels, stories, product catalogs",
+      "Templates for small/home business owners",
+      "Content batching to save time",
+    ],
   },
   {
-    id: 5,
-    title: "Remote Work Growth",
-    imageUrl: "https://picsum.photos/seed/accordion5/400/450",
-    imageHint: "remote work",
+    title: "MODULE 5: Freelancing & Remote Work",
+    badge: "Careers",
+    points: [
+      "How to start freelancing from home",
+      "Creating portfolios without experience",
+      "Pricing, client communication & proposals",
+      "Platforms: Fiverr, Upwork, LinkedIn",
+    ],
+  },
+  {
+    title: "MODULE 6: Earn From Home Pathways",
+    badge: "Earning",
+    points: [
+      "Social media management",
+      "Content & design services",
+      "Virtual assistance & online tutoring",
+      "WhatsApp & Instagram selling",
+    ],
   },
 ];
 
-const AccordionItem = ({
-  item,
-  isActive,
-  onMouseEnter,
-}: {
-  item: (typeof accordionItems)[0];
-  isActive: boolean;
-  onMouseEnter: () => void;
-}) => {
-  return (
-    <div
-      className={`
-        relative h-[450px] rounded-2xl overflow-hidden cursor-pointer
-        transition-all duration-700 ease-in-out
-        ${isActive ? "w-[400px]" : "w-[60px]"}
-      `}
-      onMouseEnter={onMouseEnter}
-    >
-      <Image
-        src={item.imageUrl}
-        alt={item.title}
-        fill
-        className="absolute inset-0 w-full h-full object-cover"
-        data-ai-hint={item.imageHint}
-      />
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-      <span
-        className={`
-          absolute text-white text-lg font-semibold whitespace-nowrap
-          transition-all duration-300 ease-in-out
-          ${
-            isActive
-              ? "bottom-6 left-1/2 -translate-x-1/2 rotate-0"
-              : "w-auto text-left bottom-24 left-1/2 -translate-x-1/2 rotate-90"
-          }
-        `}
-      >
-        {item.title}
-      </span>
-    </div>
-  );
-};
-
 export default function ProgramSection() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleItemHover = (index: number) => {
-    setActiveIndex(index);
-  };
-
   return (
-    <section className="container mx-auto px-4 py-12 md:py-24">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-        <div className="w-full md:w-1/2 text-center md:text-left">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground leading-tight tracking-tight">
-            FLAGSHIP PROGRAM: DIGITAL & AI SCHOOL
-          </h2>
-          <p className="mt-4 text-lg font-semibold text-primary flex items-center justify-center md:justify-start gap-2">
-            <Globe className="h-5 w-5" />
-            Learn Digital + AI Skills to Earn From Home
-          </p>
-          <p className="mt-6 text-base text-muted-foreground max-w-xl mx-auto md:mx-0">
-            Perfect for homemakers restarting careers, students, small business
-            owners, and working women. You get pre-recorded video lessons,
-            mobile-friendly learning, practical projects, a women-only
-            community, certificates, and job support.
-          </p>
-          <div className="mt-8">
-            <Link
-              href="#"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-primary/90 transition-colors duration-300"
-            >
-              Create Your Learning Account
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
+    <section className="container mx-auto px-4 py-16 md:py-24">
+      <div className="max-w-4xl mx-auto text-center space-y-6 mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold">
+          What You Will Learn
+        </h2>
+        <p className="mt-4 text-lg text-muted-foreground">
+          Modules Designed for Real Earning Outcomes
+        </p>
+      </div>
 
-        <div className="w-full md:w-1/2">
-          <div className="flex flex-row items-center justify-center gap-4 overflow-hidden p-4">
-            {accordionItems.map((item, index) => (
-              <AccordionItem
-                key={item.id}
-                item={item}
-                isActive={index === activeIndex}
-                onMouseEnter={() => handleItemHover(index)}
-              />
-            ))}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {modules.map((module, index) => (
+          <div key={index} className="bg-card/50 border rounded-lg p-6 flex flex-col">
+            <Badge variant="secondary" className="w-fit mb-4">{module.badge}</Badge>
+            <h3 className="text-lg font-semibold mb-4">{module.title}</h3>
+            <ul className="space-y-3">
+              {module.points.map((point, pIndex) => (
+                <li key={pIndex} className="flex items-start">
+                  <CheckCircle2 className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span className="text-muted-foreground text-sm">{point}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
+        ))}
+      </div>
+
+      <div className="text-center mt-16">
+        <Link
+          href="#"
+          className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-primary/90 transition-colors duration-300"
+        >
+          Enroll Now and Start Learning
+          <ArrowRight className="h-4 w-4" />
+        </Link>
       </div>
     </section>
   );
