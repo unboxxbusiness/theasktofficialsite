@@ -47,15 +47,19 @@ export default function DigitalAiSchoolContent() {
           </div>
         </div>
 
-        <div className="bg-muted rounded-2xl p-8 md:p-12">
-            <div className="max-w-4xl mx-auto">
-                <div className="space-y-6 text-center">
-                    <div className="flex items-center justify-center gap-3">
-                        <Users className="h-8 w-8 text-primary" />
-                        <h3 className="text-3xl font-bold">Who This School Is For</h3>
-                    </div>
-                     <p className="text-lg text-muted-foreground">Perfect for women who want to:</p>
-                    <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-3 pt-4 text-left">
+        <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-12">
+            <div className="relative z-10 max-w-xl space-y-6">
+                <div className="flex items-center gap-3">
+                    <Users className="h-8 w-8 text-primary" />
+                    <h2 className="text-3xl font-bold">Who This School Is For</h2>
+                </div>
+                <p className="text-lg text-muted-foreground">
+                    Perfect for women who want to:
+                </p>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
+                <div>
+                    <ul className="space-y-3">
                         {whoIsItFor.map((item, index) => (
                         <li key={index} className="flex items-start">
                             <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
@@ -63,6 +67,14 @@ export default function DigitalAiSchoolContent() {
                         </li>
                         ))}
                     </ul>
+                </div>
+                <div className="relative">
+                    <blockquote className="border-l-4 border-primary pl-4">
+                        <p className="text-muted-foreground">"I never thought I could learn these skills, but Theaskt made it so simple. I am now earning from home and feel so confident."</p>
+                        <div className="mt-6 space-y-3">
+                            <cite className="block font-medium not-italic">- Sunita K., Homemaker & Learner</cite>
+                        </div>
+                    </blockquote>
                 </div>
             </div>
         </div>
