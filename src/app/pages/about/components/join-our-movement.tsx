@@ -46,10 +46,16 @@ export default function JoinOurMovement() {
           ))}
         </div>
 
-        <div className="text-center mt-8">
-            <p className="text-lg font-semibold italic text-foreground max-w-3xl mx-auto">
+        <div className="text-center mt-12 space-y-4 max-w-3xl mx-auto">
+            <p className="text-lg font-semibold italic text-foreground">
                 Whether you want to restart your career, earn from home, or build new skills — your journey starts here.
             </p>
+            <div className="border-t border-dashed pt-8 mt-8 space-y-2">
+                 <p className="text-lg font-semibold text-foreground">To every woman reading this:</p>
+                 <p className="text-base text-muted-foreground">You are capable. Your dreams are valid. Your growth matters.</p>
+                 <p className="text-base text-muted-foreground">You deserve opportunities, respect, and financial independence.</p>
+                 <p className="text-lg font-bold text-primary mt-4">Theaskt.org is here to support you — every step of the way.</p>
+            </div>
         </div>
       </div>
     </section>
