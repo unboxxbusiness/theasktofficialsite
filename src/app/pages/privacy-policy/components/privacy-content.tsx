@@ -72,13 +72,13 @@ export default function PrivacyContent() {
           <h2>3. How We Use Your Information</h2>
           <p>We use your data to:</p>
           <ul>
-            <li>✔ Create & manage your learning account</li>
-            <li>✔ Provide courses, certificates, and community access</li>
-            <li>✔ Offer scholarship and financial assistance</li>
-            <li>✔ Improve platform experience, features, and support</li>
-            <li>✔ Communicate important updates related to learning programs</li>
-            <li>✔ Prevent fraud and ensure platform safety</li>
-            <li>✔ Meet legal and compliance requirements</li>
+            <li>Create & manage your learning account</li>
+            <li>Provide courses, certificates, and community access</li>
+            <li>Offer scholarship and financial assistance</li>
+            <li>Improve platform experience, features, and support</li>
+            <li>Communicate important updates related to learning programs</li>
+            <li>Prevent fraud and ensure platform safety</li>
+            <li>Meet legal and compliance requirements</li>
           </ul>
           <p>
             <strong>We do not sell your data.</strong>
@@ -128,10 +128,10 @@ export default function PrivacyContent() {
             We use reasonable security measures to protect your data:
           </p>
           <ul>
-            <li>🔐 Encrypted connections (HTTPS)</li>
-            <li>📁 Secure storage & restricted access</li>
-            <li>🛡 Monitoring against unauthorized access</li>
-            <li>📜 Internal confidentiality commitments</li>
+            <li>Encrypted connections (HTTPS)</li>
+            <li>Secure storage & restricted access</li>
+            <li>Monitoring against unauthorized access</li>
+            <li>Internal confidentiality commitments</li>
           </ul>
           <p>
             No online system is 100% secure, but we do our best to protect your
@@ -141,11 +141,11 @@ export default function PrivacyContent() {
           <h2>6. Your Rights & Choices</h2>
           <p>As a user, you may:</p>
           <ul>
-            <li>✦ Request a copy of your stored data</li>
-            <li>✦ Update or correct your information</li>
-            <li>✦ Request deletion of your account, subject to legal retention rules</li>
-            <li>✦ Withdraw consent for communication (unsubscribe/opt-out)</li>
-            <li>✦ Disable cookies in your browser settings</li>
+            <li>Request a copy of your stored data</li>
+            <li>Update or correct your information</li>
+            <li>Request deletion of your account, subject to legal retention rules</li>
+            <li>Withdraw consent for communication (unsubscribe/opt-out)</li>
+            <li>Disable cookies in your browser settings</li>
           </ul>
           <p>
             To exercise these rights, contact:{" "}
@@ -180,9 +180,9 @@ export default function PrivacyContent() {
           <h2>10. Data Retention</h2>
           <p>We retain data only as long as required for:</p>
           <ul>
-            <li>✔ Learning and certification records</li>
-            <li>✔ Support and legal compliance</li>
-            <li>✔ Scholarship verification (if applicable)</li>
+            <li>Learning and certification records</li>
+            <li>Support and legal compliance</li>
+            <li>Scholarship verification (if applicable)</li>
           </ul>
           <p>
             You may request deletion anytime (except where law requires
@@ -202,13 +202,13 @@ export default function PrivacyContent() {
             protection:
           </p>
           <p>
-            📧 Email:{" "}
+            Email:{" "}
             <a href="mailto:privacy@theaskt.org">privacy@theaskt.org</a>
             <br />
-            📬 Support:{" "}
+            Support:{" "}
             <a href="mailto:support@theaskt.org">support@theaskt.org</a>
             <br />
-            🌐 Website: Theaskt.org
+            Website: Theaskt.org
           </p>
 
           <h2>13. Legal Jurisdiction</h2>
@@ -218,7 +218,7 @@ export default function PrivacyContent() {
           </p>
 
           <div className="bg-muted/50 border-l-4 border-primary p-6 rounded-r-lg mt-12 not-prose">
-              <p className="font-bold text-lg text-foreground">💛 Final Assurance</p>
+              <p className="font-bold text-lg text-foreground">Final Assurance</p>
               <p className="mt-4 text-foreground">
                   At Theaskt.org, we understand that many women join our platform
                   with trust and vulnerability — especially learners restarting
