@@ -1,16 +1,17 @@
-import { Users, ArrowRight, Heart, GraduationCap, Smartphone, Briefcase, Globe, Handshake } from "lucide-react";
+import { Users, ArrowRight, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export default function CommunityContent() {
-  const whoIsItFor = [
-    { text: "Homemakers restarting careers after a break", icon: <Heart className="h-5 w-5 text-primary" /> },
-    { text: "Students preparing for internships & jobs", icon: <GraduationCap className="h-5 w-5 text-primary" /> },
-    { text: "Women growing small/home-based businesses", icon: <Smartphone className="h-5 w-5 text-primary" /> },
-    { text: "Working professionals upskilling for promotions", icon: <Briefcase className="h-5 w-5 text-primary" /> },
-    { text: "Freelancers and remote workers", icon: <Globe className="h-5 w-5 text-primary" /> },
-    { text: "Women from rural, semi-urban & urban backgrounds", icon: <Handshake className="h-5 w-5 text-primary" /> },
+  
+  const whyJoin = [
+    { text: "Motivation when you feel stuck" },
+    { text: "Safe space for questions, no judgment" },
+    { text: "Friendship and support from women like you" },
+    { text: "Success stories that inspire you" },
+    { text: "Tips, tools, and earning opportunities" },
+    { text: "A place where your dreams are respected" },
   ];
 
   return (
@@ -50,25 +51,34 @@ export default function CommunityContent() {
 
         <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-12">
             <div className="relative z-10 text-center space-y-4">
-                <div className="flex items-center justify-center gap-3">
-                    <Users className="h-8 w-8 text-primary" />
-                    <h2 className="text-3xl font-bold">Who Is This Community For?</h2>
-                </div>
+                <h2 className="text-3xl font-bold">Why Join the Community?</h2>
                 <p className="text-lg text-muted-foreground">
-                    Our learning community is designed for:
+                    Because learning alone is difficult. Learning together is powerful.
                 </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
-                {whoIsItFor.map((item, index) => (
-                    <div key={index} className="flex items-start gap-4">
-                        <div className="flex-shrink-0">{item.icon}</div>
-                        <span className="font-medium text-lg">{item.text}</span>
+            <div className="relative border-t border-dashed pt-8">
+                <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
+                    <div className="flex flex-col justify-center space-y-4">
+                        <p className="text-lg font-medium">Inside the community, you get:</p>
+                        <ul className="space-y-3">
+                            {whyJoin.map((item, index) => (
+                                <li key={index} className="flex items-start">
+                                    <Sparkles className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                                    <span className="text-lg">{item.text}</span>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
-                ))}
+                     <div className="relative">
+                        <blockquote className="border-l-4 border-primary pl-4">
+                            <p className="text-muted-foreground">"The community was the best part of my learning experience. I made friends, found a project partner, and never felt lost."</p>
+                            <div className="mt-6 space-y-3">
+                                <cite className="block font-medium not-italic">- Anjali R., Theaskt Learner</cite>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
             </div>
-             <blockquote className="border-l-4 border-primary pl-4 text-center max-w-3xl mx-auto pt-8">
-                <p className="text-lg font-semibold text-foreground">If you want to learn, earn, and grow — you belong here.</p>
-            </blockquote>
         </div>
       </div>
     </section>
