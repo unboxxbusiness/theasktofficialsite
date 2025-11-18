@@ -2,6 +2,7 @@ import Footer from "@/app/pages/home/components/footer";
 import AboutHero from "../pages/about/components/about-hero";
 import AboutContent from "../pages/about/components/about-content";
 import { Navbar } from "../pages/home/components/hero-section";
+import WhyTheasktExists from "../pages/about/components/why-theaskt-exists";
 
 export default function AboutPage() {
   return (
@@ -11,6 +12,7 @@ export default function AboutPage() {
       </div>
       <AboutHero />
       <AboutContent />
+      <WhyTheasktExists />
       <Footer />
     </main>
   );
