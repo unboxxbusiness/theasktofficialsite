@@ -58,7 +58,7 @@ export default function CommunityActivities() {
           <div className="border-border/50 relative rounded-3xl border p-3 lg:col-span-3">
             <div className="aspect-[4/3] relative rounded-2xl">
               <Image
-                src="https://picsum.photos/seed/community-activities/1200/900"
+                src="https://res.cloudinary.com/dhrigocvd/image/upload/v1762930874/enroll_digital_and_ai_school_fy8mux.png"
                 className="rounded-[15px] object-cover"
                 alt="Women participating in community activities"
                 fill
