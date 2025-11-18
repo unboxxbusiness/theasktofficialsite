@@ -62,7 +62,7 @@ export default function WhyMultipleSchools() {
           <div className="border-border/50 relative rounded-3xl border p-3 lg:col-span-3">
             <div className="aspect-[4/3] relative rounded-2xl">
               <Image
-                src="https://picsum.photos/seed/holistic-growth/1200/900"
+                src="https://res.cloudinary.com/dhrigocvd/image/upload/v1762927728/our_impact_tkn2ly.png"
                 className="rounded-[15px] object-cover"
                 alt="Holistic growth illustration"
                 fill
