@@ -2,25 +2,23 @@
 
 import { Button } from '@/components/ui/button';
 import {
+  Briefcase,
   CheckCircle,
   Film,
   GraduationCap,
   HeartHandshake,
   Home,
   Layers,
+  LucideIcon,
+  PenTool,
+  ShieldCheck,
   Smartphone,
   Sparkles,
   Users,
-  Briefcase,
-  PenTool,
-  ShieldCheck,
-  LucideIcon,
+  Zap,
 } from 'lucide-react';
 import Link from 'next/link';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { cn } from '@/lib/utils';
 import Image from 'next/image';
-import { ReactNode } from 'react';
 
 export function ProgramSection() {
   return (
