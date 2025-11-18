@@ -217,19 +217,19 @@ export default function PrivacyContent() {
             protection laws and regulations.
           </p>
 
-          <div className="bg-muted/50 border-l-4 border-primary p-6 rounded-r-lg mt-12">
-              <p className="font-bold text-lg">💛 Final Assurance</p>
-              <p className="mt-4">
+          <div className="bg-muted/50 border-l-4 border-primary p-6 rounded-r-lg mt-12 not-prose">
+              <p className="font-bold text-lg text-foreground">💛 Final Assurance</p>
+              <p className="mt-4 text-foreground">
                   At Theaskt.org, we understand that many women join our platform
                   with trust and vulnerability — especially learners restarting
                   after a break, applying for scholarships, or seeking safe
                   community support.
               </p>
-              <p className="mt-4 font-semibold">
+              <p className="mt-4 font-semibold text-foreground">
                   We promise to handle your information with respect,
                   confidentiality, and care.
               </p>
-              <p className="mt-4 italic">
+              <p className="mt-4 italic text-foreground">
                   Your learning journey should feel safe, dignified, and
                   empowering.
               </p>
