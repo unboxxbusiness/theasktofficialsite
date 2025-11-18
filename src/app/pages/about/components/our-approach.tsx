@@ -34,11 +34,11 @@ export default function OurApproach() {
                     <div className="border-border/50 relative rounded-3xl border p-3 lg:col-span-3">
                         <div className="aspect-[4/3] relative rounded-2xl">
                              <Image 
-                                src="https://picsum.photos/seed/approach/1200/900" 
+                                src="https://res.cloudinary.com/dhrigocvd/image/upload/v1762929643/about_us_transformation_image_da0uxt.png" 
                                 className="rounded-[15px] object-cover" 
                                 alt="learning approach illustration" 
                                 fill
-                                data-ai-hint="learning education"
+                                data-ai-hint="women transformation learning"
                             />
                         </div>
                     </div>
