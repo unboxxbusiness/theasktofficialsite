@@ -3,7 +3,7 @@ import { Navbar } from "../pages/home/components/hero-section";
 import CtaSection from "../pages/home/components/cta-section";
 import CommunityHero from "../pages/community/components/community-hero";
 import CommunityContent from "../pages/community/components/community-content";
-import WhyCommunityIsSafe from "../pages/community/components/why-community-is-safe";
+import CommunityActivities from "../pages/community/components/community-activities";
 import CommunityFeatures from "../pages/community/components/community-features";
 import CommunityGuidelines from "../pages/community/components/community-guidelines";
 import FaqSection from "../pages/home/components/faq-section";
@@ -17,7 +17,7 @@ export default function CommunityPage() {
       </div>
       <CommunityHero />
       <CommunityContent />
-      <WhyCommunityIsSafe />
+      <CommunityActivities />
       <CommunityFeatures />
       <CommunityGuidelines />
       <FaqSection />
