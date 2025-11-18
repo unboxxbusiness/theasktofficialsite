@@ -18,18 +18,15 @@ export default function AboutContent() {
             </div>
           </div>
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold">Our Mission</h2>
-            <p className="text-lg text-muted-foreground">
-              Theaskt.org is a public learning trust dedicated to empowering women across India with practical, income-focused education. We believe every woman has the right to financial independence, respect, and a life of dignity.
-            </p>
-            <p className="text-lg text-muted-foreground">
-              Our goal is to break the cycle of dependency by providing skills that matter. We focus on digital and AI technologies because they offer a direct path to remote work, freelancing, and entrepreneurship—opportunities that can be pursued from home, on your own terms.
-            </p>
-            <blockquote className="border-l-4 border-primary pl-4 italic text-muted-foreground">
-              “When a woman learns, a family rises. When a family rises, a nation grows.”
+            <h2 className="text-3xl md:text-4xl font-bold">Our Belief</h2>
+            <blockquote className="border-l-4 border-primary pl-4 italic text-lg text-muted-foreground">
+              When a woman learns, she grows. When she grows, her family rises. When families rise, our nation thrives.
             </blockquote>
             <p className="text-lg text-muted-foreground">
-              We are more than just a platform; we are a community. A safe, supportive space where women can learn, grow, and lift each other up. Join us in our mission to build a stronger India, one empowered woman at a time.
+              Theaskt.org exists to make learning, skills, and financial independence possible for every woman and girl in India — regardless of background, language, location, age, or previous education.
+            </p>
+            <p className="text-lg text-muted-foreground">
+              We are building a future where no woman is left behind in the digital and AI-driven world.
             </p>
           </div>
         </div>
