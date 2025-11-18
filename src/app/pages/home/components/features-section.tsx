@@ -33,7 +33,7 @@ export default function FeaturesSection() {
     <section className="py-16 md:py-32">
         <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-12">
             <div className="relative z-10 max-w-3xl mx-auto text-center space-y-6">
-                <h2 className="text-4xl font-medium lg:text-5xl">A Learning Trust Created For Women, With Women, By Women</h2>
+                <h2 className="text-4xl font-medium lg:text-5xl">A Learning Trust Created For Women</h2>
                 <p>
                 Theaskt.org is a public learning trust dedicated to empowering women across India with practical, income-focused education. We believe every woman deserves:
                 </p>
