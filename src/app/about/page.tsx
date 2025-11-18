@@ -13,8 +13,8 @@ export default function AboutPage() {
       </div>
       <AboutHero />
       <AboutContent />
-      <WhatMakesUsDifferent />
       <WhyTheasktExists />
+      <WhatMakesUsDifferent />
       <Footer />
     </main>
   );
