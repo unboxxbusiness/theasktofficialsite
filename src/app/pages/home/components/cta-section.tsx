@@ -21,6 +21,13 @@ export default function CtaSection() {
                             <ArrowRight className="h-4 w-4" />
                         </Link>
                     </div>
+
+                    <div className="mt-12 border-t border-dashed pt-8">
+                        <blockquote className="text-lg italic text-muted-foreground">
+                            “The best time to plant a tree was 20 years ago. The second best time is now.”
+                        </blockquote>
+                    </div>
+
                 </div>
             </div>
         </section>
