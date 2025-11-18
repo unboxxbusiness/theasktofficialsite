@@ -9,33 +9,50 @@ import {
 import { PhoneCall } from "lucide-react";
 import Link from "next/link";
 
-export default function FaqSection() {
-  const faqItems = [
+const faqItems = [
     {
-      id: "item-1",
       question:
         "Q: Do I need to join the Digital & AI School to access other schools later?",
-      answer: "No, you can join any school when it launches.",
+      answer: "No, you can join any school that interests you when it launches. However, the Digital & AI school provides foundational skills that are useful across all other disciplines.",
     },
     {
-      id: "item-2",
       question: "Q: Can I join from a mobile phone?",
-      answer: "Yes. Our platform is mobile-friendly.",
+      answer: "Yes. All our schools and learning platforms are designed to be mobile-friendly, so you can learn from anywhere.",
     },
     {
-      id: "item-3",
-      question: "Q: Are there scholarships for all schools?",
-      answer: "Yes, based on funding and eligibility.",
+      question: "Q: Are there scholarships available for all schools?",
+      answer: "Yes, our goal is to offer scholarship seats for all our schools, subject to funding and learner eligibility. You can apply for scholarships for any available program.",
     },
     {
-      id: "item-4",
-      question: "Q: Will each school have certificates?",
-      answer: "Yes, for completed courses/modules.",
+      question: "Q: Will each school have its own certificate?",
+      answer: "Yes, each school will offer certificates for its specific courses and learning modules upon successful completion.",
+    },
+     {
+      question: "Q: How do I know when new schools are launching?",
+      answer: "You can join the waitlist for upcoming schools to receive notifications, early access, and special offers before the public launch.",
     },
   ];
 
+export default function FaqSection() {
+    const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
+
   return (
     <section className="bg-muted w-full py-16 md:py-24">
+       <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-10">
           <div className="flex flex-col gap-8">
@@ -60,8 +77,8 @@ export default function FaqSection() {
             </Link>
           </div>
           <Accordion type="single" collapsible className="w-full">
-            {faqItems.map((item) => (
-              <AccordionItem key={item.id} value={item.id}>
+            {faqItems.map((item, index) => (
+              <AccordionItem key={item.question} value={`item-${index}`}>
                 <AccordionTrigger className="text-left">
                   {item.question}
                 </AccordionTrigger>

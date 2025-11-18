@@ -6,6 +6,12 @@ import CommunityActivities from "../pages/community/components/community-activit
 import CommunityFeatures from "../pages/community/components/community-features";
 import CommunityGuidelines from "../pages/community/components/community-guidelines";
 import CommunityCta from "../pages/community/components/community-cta";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Theaskt.org Community | A Sisterhood of Learning for Indian Women',
+  description: 'Join our safe, women-only community at Theaskt.org. Connect with learners, get support, and grow together as you master digital and AI skills for your career.',
+}
 
 export default function CommunityPage() {
   return (

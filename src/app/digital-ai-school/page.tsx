@@ -10,6 +10,13 @@ import ProgramSection from "../pages/home/components/program-section";
 import WhyDigitalAiSkills from "../pages/digital-ai-school/components/why-digital-ai-skills";
 import WhatIsIncludedSection from "../pages/digital-ai-school/components/what-is-included-section";
 import FutureSchoolsSection from "../pages/home/components/future-schools-section";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Digital & AI School for Women | TheAskt.org',
+  description: 'Enroll in our flagship Digital & AI School. Learn practical skills to earn from home, restart your career, or grow a business. Mobile-friendly, beginner-focused.',
+}
+
 
 export default function DigitalAiSchoolPage() {
   return (

@@ -10,6 +10,13 @@ import WhyMultipleSchools from "../pages/schools/components/why-multiple-schools
 import LearningPath from "../pages/schools/components/learning-path";
 import ForPartners from "../pages/schools/components/for-partners";
 import FaqSection from "../pages/schools/components/faq-section";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Our Schools Hub | TheAskt.org Learning Ecosystem',
+  description: 'Explore the schools at Theaskt.org, from our flagship Digital & AI School to upcoming programs in Business, Legal Rights, and Personal Growth for women in India.',
+}
+
 
 export default function SchoolsPage() {
   return (

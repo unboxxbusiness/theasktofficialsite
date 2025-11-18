@@ -4,13 +4,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Navbar } from "./navbar";
 
 export default function HeroSection() {
   const title = "Restart Your Career & Earn From Home With Digital & AI Skills";
   return (
     <div className="relative mx-auto my-10 flex w-full max-w-7xl flex-col items-center justify-center">
-      <Navbar />
       <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
         <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-primary to-transparent" />
       </div>
@@ -98,6 +96,7 @@ export default function HeroSection() {
               height={675}
               width={1200}
               data-ai-hint="women learning"
+              priority
             />
           </div>
         </motion.div>

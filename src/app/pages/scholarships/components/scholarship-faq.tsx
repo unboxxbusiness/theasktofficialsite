@@ -7,38 +7,54 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-export default function ScholarshipFaq() {
-  const faqItems = [
+const faqItems = [
     {
-      id: "item-1",
-      question: "Q1: Do I need to speak perfect English?",
-      answer: "No. We use a simple Hindi/English mix for easy learning.",
+      question: "Q1: Do I need to speak perfect English to get a scholarship?",
+      answer: "No. Our courses use a simple mix of Hindi and English. Your desire to learn is more important than your English proficiency.",
     },
     {
-      id: "item-2",
-      question: "Q2: Can I apply if I only have a mobile phone?",
-      answer: "Yes. Our platform is mobile-friendly.",
+      question: "Q2: Can I apply for a scholarship if I only have a mobile phone?",
+      answer: "Yes, absolutely. Our platform is designed for mobile-first learning, so a smartphone is all you need to start.",
     },
     {
-      id: "item-3",
-      question: "Q3: Is this only for homemakers?",
+      question: "Q3: Is the scholarship only for homemakers?",
       answer:
-        "No. Students, working women, and small business owners are welcome.",
+        "No. We welcome applications from homemakers, students, working women who need to upskill, and small business owners.",
     },
     {
-      id: "item-4",
-      question: "Q4: Will I receive a certificate?",
-      answer: "Yes, for completed learning programs.",
+      question: "Q4: Do scholarship learners receive a certificate?",
+      answer: "Yes. All learners, including scholarship recipients, receive a certificate upon successful completion of their program.",
     },
     {
-      id: "item-5",
-      question: "Q5: Do I need to repay the scholarship later?",
-      answer: "No. It is not a loan.",
+      question: "Q5: Do I need to repay the scholarship amount later?",
+      answer: "No. A scholarship is a grant to support your education; it is not a loan and does not need to be repaid.",
+    },
+     {
+      question: "Q6: How are scholarship recipients selected?",
+      answer: "We review applications based on financial need, your motivation to learn, and your commitment to completing the program. We review every application with care.",
     },
   ];
 
+export default function ScholarshipFaq() {
+   const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
+
   return (
     <section className="bg-muted w-full py-16 md:py-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-10">
           <div className="flex flex-col gap-8">
@@ -58,8 +74,8 @@ export default function ScholarshipFaq() {
             </div>
           </div>
           <Accordion type="single" collapsible className="w-full">
-            {faqItems.map((item) => (
-              <AccordionItem key={item.id} value={item.id}>
+            {faqItems.map((item, index) => (
+              <AccordionItem key={item.question} value={`item-${index}`}>
                 <AccordionTrigger className="text-left">
                   {item.question}
                 </AccordionTrigger>

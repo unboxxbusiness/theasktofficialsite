@@ -10,6 +10,12 @@ import WhoCanApply from "../pages/scholarships/components/who-can-apply";
 import HowToApply from "../pages/scholarships/components/how-to-apply";
 import Supporters from "../pages/scholarships/components/supporters";
 import ScholarshipFaq from "../pages/scholarships/components/scholarship-faq";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Scholarships for Women & Girls in India | TheAskt.org',
+  description: 'Apply for a scholarship at Theaskt.org. We provide financial support for women to learn digital & AI skills, restart careers, and become financially independent.',
+}
 
 export default function ScholarshipsPage() {
   return (

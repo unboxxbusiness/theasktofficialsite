@@ -9,10 +9,20 @@ import FutureSchoolsSection from "./pages/home/components/future-schools-section
 import FAQSection from "./pages/home/components/faq-section";
 import CtaSection from "./pages/home/components/cta-section";
 import Footer from "./pages/home/components/footer";
+import { Navbar } from "./pages/home/components/navbar";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'TheAskt.org | Digital & AI Skills for Women in India',
+  description: 'A public learning trust empowering women in India to restart careers and earn from home with practical digital and AI skills. Join our safe, supportive community.',
+}
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
+      <div className="w-full max-w-7xl">
+        <Navbar />
+      </div>
       <HeroSection />
       <StatsSection />
       <ProblemSection />

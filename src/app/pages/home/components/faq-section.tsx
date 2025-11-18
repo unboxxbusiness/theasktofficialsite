@@ -9,44 +9,55 @@ import {
 import { PhoneCall } from 'lucide-react'
 import Link from 'next/link'
 
+const faqItems = [
+    {
+      question: 'I have a long career break. Can I still join?',
+      answer: 'Yes! Our programs are designed for women restarting their careers, even after a long break. We start with the basics and provide full support.',
+    },
+    {
+      question: 'Can I learn only from a mobile phone?',
+      answer: 'Absolutely. Our entire learning system is mobile-friendly, from video lessons to community access. No laptop is required to start.',
+    },
+    {
+      question: 'Do I need strong English or technical knowledge?',
+      answer: 'No. Our courses use a simple mix of Hindi and English (Hinglish). We teach step-by-step, assuming no prior technical knowledge.',
+    },
+    {
+      question: 'Will I get a certificate?',
+      answer: 'Yes, you will receive a certificate from Theaskt Learning Trust for successfully completing learning paths and modules, which you can add to your CV.',
+    },
+    {
+      question: 'Will you help me find work or earn?',
+      answer:
+        'Yes. We provide dedicated support for freelancing, finding remote work, and starting a home-based business. Our goal is to help you become financially independent.',
+    },
+    {
+      question: 'Is this platform safe for women?',
+      answer:
+        'Yes. Safety is our top priority. Our learning communities are women-only, carefully moderated, and based on respect, support, and trust.',
+    },
+  ];
+
 export default function FAQSection() {
-  const faqItems = [
-    {
-      id: 'item-1',
-      question: 'Q1: I have a long career break. Can I still join?',
-      answer: 'Yes! Many learners are restarting after years.',
-    },
-    {
-      id: 'item-2',
-      question: 'Q2: Can I learn only from mobile?',
-      answer: 'Yes. Lessons are created for mobile-first learners.',
-    },
-    {
-      id: 'item-3',
-      question: 'Q3: Do I need strong English or technical knowledge?',
-      answer: 'No. Simple language, step-by-step guidance.',
-    },
-    {
-      id: 'item-4',
-      question: 'Q4: Will I get a certificate?',
-      answer: 'Yes, for completed modules and skill tracks.',
-    },
-    {
-      id: 'item-5',
-      question: 'Q5: Will you help me earn?',
-      answer:
-        'Yes. Freelancing, remote work, and home-business support is included.',
-    },
-    {
-      id: 'item-6',
-      question: 'Q6: Is this safe for women?',
-      answer:
-        'Yes. Community and learning spaces are carefully moderated.',
-    },
-  ]
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
 
   return (
     <section className="bg-muted w-full py-16 md:py-24">
+       <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-10">
           <div className="flex flex-col gap-8">
@@ -70,8 +81,8 @@ export default function FAQSection() {
             </Link>
           </div>
           <Accordion type="single" collapsible className="w-full">
-            {faqItems.map((item) => (
-              <AccordionItem key={item.id} value={item.id}>
+            {faqItems.map((item, index) => (
+              <AccordionItem key={item.question} value={`item-${index}`}>
                 <AccordionTrigger className="text-left">{item.question}</AccordionTrigger>
                 <AccordionContent>{item.answer}</AccordionContent>
               </AccordionItem>

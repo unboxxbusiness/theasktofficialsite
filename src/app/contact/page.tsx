@@ -5,6 +5,13 @@ import ContactIntro from "../pages/contact/components/contact-intro";
 import ContactOptions from "../pages/contact/components/contact-options";
 import ContactDetails from "../pages/contact/components/contact-details";
 import NoteFromTeam from "../pages/contact/components/note-from-team";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact Us | Theaskt.org Support & Partnerships',
+  description: 'Get in touch with Theaskt.org for course enrollment, scholarships, partnerships, or any questions. We are here to support your journey to learn and earn.',
+}
+
 
 export default function ContactPage() {
   return (

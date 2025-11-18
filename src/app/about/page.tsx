@@ -9,6 +9,12 @@ import WhoWeServe from "../pages/about/components/who-we-serve";
 import OurApproach from "../pages/about/components/our-approach";
 import OurVision from "../pages/about/components/our-vision";
 import JoinOurMovement from "../pages/about/components/join-our-movement";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Theaskt.org | Our Mission to Empower Women in India',
+  description: 'Learn about Theaskt.org, a public learning trust dedicated to providing women in India with the skills and confidence for financial independence. Discover our mission, vision, and unique approach.',
+}
 
 export default function AboutPage() {
   return (
