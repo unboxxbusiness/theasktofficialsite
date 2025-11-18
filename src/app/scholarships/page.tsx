@@ -3,6 +3,7 @@ import { Navbar } from "../pages/home/components/hero-section";
 import ScholarshipsHero from "../pages/scholarships/components/scholarships-hero";
 import ScholarshipsContent from "../pages/scholarships/components/scholarships-content";
 import CtaSection from "../pages/home/components/cta-section";
+import WhyWeOfferScholarships from "../pages/scholarships/components/why-we-offer-scholarships";
 
 export default function ScholarshipsPage() {
   return (
@@ -12,6 +13,7 @@ export default function ScholarshipsPage() {
       </div>
       <ScholarshipsHero />
       <ScholarshipsContent />
+      <WhyWeOfferScholarships />
       <CtaSection />
       <Footer />
     </main>
