@@ -106,140 +106,84 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
   showOnMobile = true,
   floatingButtonColor = "bg-primary",
 }) => {
-  const [hoveredPlatform, setHoveredPlatform] = React.useState<Platform | null>(
-    null
-  );
   const [mobileDockOpen, setMobileDockOpen] = React.useState(false);
+
+  if (!showOnMobile) {
+    return null;
+  }
 
   return (
     <>
-      {/* ===== Desktop View ===== */}
-      <div
-        className={`${
-          showOnMobile ? "hidden lg:flex" : "hidden md:flex"
-        } flex-col fixed top-[35%] left-0 z-40`}
-      >
-        <ul className="space-y-3">
-          {links.map(({ platform, href }) => {
-            const style = PLATFORM_STYLES[platform];
-            if (!style) return null;
-            const Icon = style.icon;
+      <div className="fixed bottom-6 left-6 z-50">
+        {mobileDockOpen && (
+          <div
+            className="fixed inset-0 bg-[hsl(var(--background)/0.6)] backdrop-blur-sm"
+            onClick={() => setMobileDockOpen(false)}
+          />
+        )}
 
-            return (
-              <li
-                key={platform}
-                onMouseEnter={() => setHoveredPlatform(platform)}
-                onMouseLeave={() => setHoveredPlatform(null)}
-                className="group"
-              >
+        <div className="relative">
+          {/* Floating Icons */}
+          <div
+            className={`absolute bottom-20 left-0 flex flex-col-reverse gap-3 transition-all duration-500 ${
+              mobileDockOpen
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8 pointer-events-none"
+            }`}
+          >
+            {links.map(({ platform, href }, index) => {
+              const style = PLATFORM_STYLES[platform];
+              if (!style) return null;
+              const Icon = style.icon;
+              return (
                 <a
+                  key={platform}
                   href={href}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-between w-44 h-14 px-4 ml-[-120px]
-                             group-hover:ml-[-10px] transition-all duration-500 ease-out
-                             rounded-r-xl relative overflow-hidden border border-border
-                             bg-[hsl(var(--card))] shadow-md hover:shadow-lg"
+                  className="group relative mr-auto"
+                  style={{
+                    transitionDelay: mobileDockOpen ? `${index * 50}ms` : "0ms",
+                  }}
                 >
-                  {/* Gradient Overlay */}
                   <div
-                    className={`absolute inset-0 bg-gradient-to-r ${
-                      hoveredPlatform === platform
-                        ? style.hoverGradient
-                        : style.gradient
-                    } opacity-90 transition-all duration-500`}
-                  />
-
-                  {/* Label */}
-                  <span className="relative z-10 text-white font-semibold tracking-wide text-sm group-hover:tracking-widest transition-all duration-300">
-                    {style.label}
-                  </span>
-
-                  {/* Icon */}
-                  <Icon
-                    size={22}
-                    className="relative z-10 text-white drop-shadow-sm group-hover:scale-125 transition-transform duration-500"
-                  />
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-
-      {/* ===== Mobile Floating Dock ===== */}
-      {showOnMobile && (
-        <div className="lg:hidden fixed bottom-6 left-6 z-50">
-          {mobileDockOpen && (
-            <div
-              className="fixed inset-0 bg-[hsl(var(--background)/0.6)] backdrop-blur-sm"
-              onClick={() => setMobileDockOpen(false)}
-            />
-          )}
-
-          <div className="relative">
-            {/* Floating Icons */}
-            <div
-              className={`absolute bottom-20 left-0 flex flex-col-reverse gap-3 transition-all duration-500 ${
-                mobileDockOpen
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8 pointer-events-none"
-              }`}
-            >
-              {links.map(({ platform, href }, index) => {
-                const style = PLATFORM_STYLES[platform];
-                if (!style) return null;
-                const Icon = style.icon;
-                return (
-                  <a
-                    key={platform}
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group relative mr-auto"
-                    style={{
-                      transitionDelay: mobileDockOpen ? `${index * 50}ms` : "0ms",
-                    }}
+                    className={`w-14 h-14 rounded-full bg-gradient-to-br ${style.gradient}
+                               flex items-center justify-center shadow-lg hover:scale-110
+                               transition-transform duration-300 border border-border`}
                   >
-                    <div
-                      className={`w-14 h-14 rounded-full bg-gradient-to-br ${style.gradient}
-                                 flex items-center justify-center shadow-lg hover:scale-110
-                                 transition-transform duration-300 border border-border`}
-                    >
-                      <Icon size={22} className="text-white" />
-                    </div>
+                    <Icon size={22} className="text-white" />
+                  </div>
 
-                    {/* Tooltip */}
-                    <div className="absolute top-1/2 -translate-y-1/2 left-16
-                                    bg-[hsl(var(--popover))] text-[hsl(var(--popover-foreground))]
-                                    text-xs font-medium px-3 py-1.5 rounded-md shadow-md
-                                    opacity-0 group-hover:opacity-100 transition-opacity">
-                      {style.label}
-                      <div className="absolute top-1/2 -translate-y-1/2 -left-1 w-2 h-2 bg-[hsl(var(--popover))] rotate-45" />
-                    </div>
-                  </a>
-                );
-              })}
-            </div>
-
-            {/* Floating Button */}
-            <button
-              onClick={() => setMobileDockOpen(!mobileDockOpen)}
-              className={`relative flex items-center justify-center w-16 h-16 rounded-full shadow-2xl active:scale-95
-                         transition-all duration-300 border border-border overflow-hidden ${floatingButtonColor}`}
-              aria-label="Toggle social links"
-            >
-              <div className="relative z-10">
-                {mobileDockOpen ? (
-                  <X size={24} className="text-primary-foreground" />
-                ) : (
-                  <Share2 size={24} className="text-primary-foreground" />
-                )}
-              </div>
-            </button>
+                  {/* Tooltip */}
+                  <div className="absolute top-1/2 -translate-y-1/2 left-16
+                                  bg-[hsl(var(--popover))] text-[hsl(var(--popover-foreground))]
+                                  text-xs font-medium px-3 py-1.5 rounded-md shadow-md
+                                  opacity-0 group-hover:opacity-100 transition-opacity">
+                    {style.label}
+                    <div className="absolute top-1/2 -translate-y-1/2 -left-1 w-2 h-2 bg-[hsl(var(--popover))] rotate-45" />
+                  </div>
+                </a>
+              );
+            })}
           </div>
+
+          {/* Floating Button */}
+          <button
+            onClick={() => setMobileDockOpen(!mobileDockOpen)}
+            className={`relative flex items-center justify-center w-16 h-16 rounded-full shadow-2xl active:scale-95
+                       transition-all duration-300 border border-border overflow-hidden ${floatingButtonColor}`}
+            aria-label="Toggle social links"
+          >
+            <div className="relative z-10">
+              {mobileDockOpen ? (
+                <X size={24} className="text-primary-foreground" />
+              ) : (
+                <Share2 size={24} className="text-primary-foreground" />
+              )}
+            </div>
+          </button>
         </div>
-      )}
+      </div>
     </>
   );
 };
