@@ -1,6 +1,7 @@
 "use client";
 
-import { Mail, MessageSquare } from 'lucide-react';
+import { Mail, MessageSquare, Handshake, Share2, Youtube, Instagram, Linkedin, Facebook } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ContactDetails() {
   return (
@@ -11,7 +12,7 @@ export default function ContactDetails() {
             Get in Touch
           </h2>
         </div>
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <div className="bg-background p-8 rounded-lg border flex flex-col">
             <div className="flex items-center gap-4 mb-4">
               <Mail className="h-8 w-8 text-primary" />
@@ -37,6 +38,33 @@ export default function ContactDetails() {
             <p className="text-sm text-muted-foreground mt-2">
               A dedicated WhatsApp learning & helpdesk channel.
             </p>
+          </div>
+           <div className="bg-background p-8 rounded-lg border flex flex-col">
+            <div className="flex items-center gap-4 mb-4">
+              <Handshake className="h-8 w-8 text-primary" />
+              <h3 className="text-2xl font-semibold">Trust / Admin & Partnerships</h3>
+            </div>
+             <p className="text-muted-foreground mb-1 font-semibold">For CSR, NGO, Donor, Sponsor, and Collaboration inquiries:</p>
+            <a href="mailto:partnerships@theaskt.org" className="text-primary font-bold text-lg hover:underline break-all">
+              partnerships@theaskt.org
+            </a>
+          </div>
+           <div className="bg-background p-8 rounded-lg border flex flex-col">
+            <div className="flex items-center gap-4 mb-4">
+              <Share2 className="h-8 w-8 text-primary" />
+              <h3 className="text-2xl font-semibold">Follow Us</h3>
+            </div>
+             <p className="text-muted-foreground mb-4">For updates, live sessions, and inspiration:</p>
+             <div className="flex space-x-4">
+                <Link href="#" className="text-muted-foreground hover:text-primary"><Youtube className="h-6 w-6" /></Link>
+                <Link href="#" className="text-muted-foreground hover:text-primary"><Instagram className="h-6 w-6" /></Link>
+                <Link href="#" className="text-muted-foreground hover:text-primary"><Linkedin className="h-6 w-6" /></Link>
+                <Link href="#" className="text-muted-foreground hover:text-primary"><Facebook className="h-6 w-6" /></Link>
+                <Link href="#" className="text-muted-foreground hover:text-primary flex items-center gap-1 text-sm">
+                    <MessageCircle className="h-5 w-5" /> 
+                    <span className="font-semibold">Community (soon)</span>
+                </Link>
+            </div>
           </div>
         </div>
       </div>
