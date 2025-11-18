@@ -4,6 +4,7 @@ import SchoolsHero from "../pages/schools/components/schools-hero";
 import SchoolsIntro from "../pages/schools/components/schools-intro";
 import SchoolsList from "../pages/schools/components/schools-list";
 import CtaSection from "../pages/home/components/cta-section";
+import MissionSection from "../pages/schools/components/mission-section";
 
 export default function SchoolsPage() {
   return (
@@ -13,6 +14,7 @@ export default function SchoolsPage() {
       </div>
       <SchoolsHero />
       <SchoolsIntro />
+      <MissionSection />
       <SchoolsList />
       <CtaSection />
       <Footer />
