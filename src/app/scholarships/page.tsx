@@ -5,6 +5,7 @@ import ScholarshipsContent from "../pages/scholarships/components/scholarships-c
 import CtaSection from "../pages/home/components/cta-section";
 import WhyWeOfferScholarships from "../pages/scholarships/components/why-we-offer-scholarships";
 import TypesOfScholarships from "../pages/scholarships/components/types-of-scholarships";
+import ScholarshipUsage from "../pages/scholarships/components/scholarship-usage";
 
 export default function ScholarshipsPage() {
   return (
@@ -16,6 +17,7 @@ export default function ScholarshipsPage() {
       <ScholarshipsContent />
       <WhyWeOfferScholarships />
       <TypesOfScholarships />
+      <ScholarshipUsage />
       <CtaSection />
       <Footer />
     </main>
