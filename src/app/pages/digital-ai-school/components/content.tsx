@@ -5,20 +5,12 @@ import { ArrowRight } from 'lucide-react';
 
 export default function DigitalAiSchoolContent() {
   const whoIsItFor = [
-    "Homemakers restarting their careers",
-    "Students wanting job-ready skills",
-    "Small business owners going digital",
-    "Working women seeking promotion",
-    "Anyone wanting to earn from home",
-  ];
-
-  const programIncludes = [
-    "Pre-recorded video lessons in simple language",
-    "Mobile-friendly learning platform",
-    "Practical projects & assignments",
-    "Women-only supportive community",
-    "Verifiable certificates",
-    "Job, freelance & business support",
+    "Restart career after marriage/motherhood",
+    "Earn from home using digital & AI skills",
+    "Grow a home-business on Instagram/WhatsApp",
+    "Get internships or remote work opportunities",
+    "Upskill for better salaries or job promotions",
+    "Work with clients across India & globally",
   ];
 
   return (
@@ -56,28 +48,15 @@ export default function DigitalAiSchoolContent() {
         </div>
 
         <div className="bg-muted rounded-2xl p-8 md:p-12">
-            <div className="grid md:grid-cols-2 gap-12">
-                <div className="space-y-6">
-                    <div className="flex items-center gap-3">
+            <div className="max-w-3xl mx-auto">
+                <div className="space-y-6 text-center">
+                    <div className="flex items-center justify-center gap-3">
                         <Users className="h-8 w-8 text-primary" />
-                        <h3 className="text-2xl font-bold">Who Is This For?</h3>
+                        <h3 className="text-2xl font-bold">Who This School Is For</h3>
                     </div>
-                    <ul className="space-y-3">
+                     <p className="text-lg text-muted-foreground">Perfect for women who want to:</p>
+                    <ul className="space-y-3 grid sm:grid-cols-2 gap-x-6 gap-y-3 text-left">
                         {whoIsItFor.map((item, index) => (
-                        <li key={index} className="flex items-start">
-                            <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                            <span className="text-lg text-muted-foreground">{item}</span>
-                        </li>
-                        ))}
-                    </ul>
-                </div>
-                 <div className="space-y-6">
-                    <div className="flex items-center gap-3">
-                        <Target className="h-8 w-8 text-primary" />
-                        <h3 className="text-2xl font-bold">What The Program Includes:</h3>
-                    </div>
-                    <ul className="space-y-3">
-                        {programIncludes.map((item, index) => (
                         <li key={index} className="flex items-start">
                             <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
                             <span className="text-lg text-muted-foreground">{item}</span>
