@@ -45,22 +45,30 @@ export default function AboutContent() {
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold">Who We Are</h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-            Theaskt.org is a public learning trust committed to providing accessible, practical, and life-changing education for women. Our programs are crafted to help learners:
-            </p>
-            <ul className="mt-8 space-y-4 text-left inline-block">
-                {whoWeArePoints.map((point, index) => (
-                    <li key={index} className="flex items-start">
-                        <Sparkles className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                        <span className="text-lg text-muted-foreground">{point}</span>
-                    </li>
-                ))}
-            </ul>
-            <p className="mt-8 text-lg font-semibold italic text-foreground">
-            We are not a typical ed-tech company. We are a mission-led learning movement.
-            </p>
+        <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-12">
+            <div className="relative z-10 max-w-xl space-y-6">
+                <h2 className="text-4xl font-medium lg:text-5xl">Who We Are</h2>
+                <p>
+                    Theaskt.org is a public learning trust committed to providing accessible, practical, and life-changing education for women. We are not a typical ed-tech company. We are a mission-led learning movement.
+                </p>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
+                <div className="flex flex-col justify-center space-y-4">
+                     <p className="text-lg font-medium">Our programs are crafted to help learners:</p>
+                </div>
+                <div className="relative">
+                    <blockquote className="border-l-4 border-primary pl-4">
+                        <ul className="space-y-3">
+                            {whoWeArePoints.map((point, index) => (
+                                <li key={index} className="flex items-start">
+                                    <Sparkles className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                                    <span className="text-lg text-muted-foreground">{point}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </blockquote>
+                </div>
+            </div>
         </div>
       </div>
     </section>
