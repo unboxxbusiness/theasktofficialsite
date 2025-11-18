@@ -4,6 +4,7 @@ import { ArrowRight, GraduationCap, Handshake, School } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import React from "react";
+import DotPattern from "@/components/ui/dot-pattern";
 
 const actions = [
   {
@@ -50,11 +51,23 @@ export default function JoinOurMovement() {
             <p className="text-lg font-semibold italic text-foreground">
                 Whether you want to restart your career, earn from home, or build new skills — your journey starts here.
             </p>
-            <div className="border-t border-dashed pt-8 mt-8 space-y-2">
-                 <p className="text-lg font-semibold text-foreground">To every woman reading this:</p>
-                 <p className="text-base text-muted-foreground">You are capable. Your dreams are valid. Your growth matters.</p>
-                 <p className="text-base text-muted-foreground">You deserve opportunities, respect, and financial independence.</p>
-                 <p className="text-lg font-bold text-primary mt-4">Theaskt.org is here to support you — every step of the way.</p>
+             <div className="relative mt-12 overflow-hidden rounded-2xl border bg-card p-8 text-center">
+                <DotPattern
+                    width={20}
+                    height={20}
+                    cx={1}
+                    cy={1}
+                    cr={1}
+                    className={cn(
+                        "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)]",
+                    )}
+                />
+                <div className="relative space-y-2">
+                    <p className="text-lg font-semibold text-foreground">To every woman reading this:</p>
+                    <p className="text-base text-muted-foreground">You are capable. Your dreams are valid. Your growth matters.</p>
+                    <p className="text-base text-muted-foreground">You deserve opportunities, respect, and financial independence.</p>
+                    <p className="text-lg font-bold text-primary mt-4">Theaskt.org is here to support you — every step of the way.</p>
+                </div>
             </div>
         </div>
       </div>
