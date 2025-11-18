@@ -1,6 +1,7 @@
 import Footer from "@/app/pages/home/components/footer";
 import { Navbar } from "../pages/home/components/hero-section";
 import ContactHero from "../pages/contact/components/contact-hero";
+import ContactIntro from "../pages/contact/components/contact-intro";
 
 export default function ContactPage() {
   return (
@@ -9,6 +10,7 @@ export default function ContactPage() {
         <Navbar />
       </div>
       <ContactHero />
+      <ContactIntro />
       <Footer />
     </main>
   );
