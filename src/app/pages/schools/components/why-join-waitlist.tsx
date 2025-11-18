@@ -23,7 +23,10 @@ export default function WhyJoinWaitlist() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3 p-4 rounded-lg bg-background border">
+              <div
+                key={index}
+                className="flex items-center space-x-3 p-4 rounded-lg bg-background border"
+              >
                 <Sparkles className="h-5 w-5 text-primary flex-shrink-0" />
                 <span className="text-foreground text-left">{benefit}</span>
               </div>

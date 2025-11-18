@@ -6,6 +6,7 @@ import SchoolsList from "../pages/schools/components/schools-list";
 import CtaSection from "../pages/home/components/cta-section";
 import MissionSection from "../pages/schools/components/mission-section";
 import WhyJoinWaitlist from "../pages/schools/components/why-join-waitlist";
+import WhyMultipleSchools from "../pages/schools/components/why-multiple-schools";
 
 export default function SchoolsPage() {
   return (
@@ -18,6 +19,7 @@ export default function SchoolsPage() {
       <MissionSection />
       <SchoolsList />
       <WhyJoinWaitlist />
+      <WhyMultipleSchools />
       <CtaSection />
       <Footer />
     </main>
