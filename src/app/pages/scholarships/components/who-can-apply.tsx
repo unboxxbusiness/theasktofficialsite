@@ -25,15 +25,15 @@ export default function WhoCanApply() {
             You are encouraged to apply if any of these describe you:
           </p>
         </div>
-        <div className="max-w-3xl mx-auto bg-card p-8 rounded-lg border">
-            <ul className="space-y-4">
+        <div className="relative mx-auto grid max-w-4xl divide-y divide-x border sm:grid-cols-2 lg:grid-cols-3">
             {eligibilityCriteria.map((item, index) => (
-                <li key={index} className="flex items-start">
-                    <Heart className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-yellow-500" />
-                    <span className="text-lg text-muted-foreground">{item}</span>
-                </li>
+                <div key={index} className="space-y-3 p-8">
+                    <div className="flex items-start gap-3">
+                        <Heart className="size-5 text-primary mt-1 flex-shrink-0" />
+                        <p className="text-muted-foreground">{item}</p>
+                    </div>
+                </div>
             ))}
-            </ul>
         </div>
         <div className="text-center mt-12">
             <p className="text-lg font-semibold italic text-foreground max-w-3xl mx-auto">
