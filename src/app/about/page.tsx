@@ -4,6 +4,7 @@ import AboutContent from "../pages/about/components/about-content";
 import { Navbar } from "../pages/home/components/hero-section";
 import WhyTheasktExists from "../pages/about/components/why-theaskt-exists";
 import WhatMakesUsDifferent from "../pages/about/components/what-makes-us-different";
+import LearningEcosystem from "../pages/about/components/learning-ecosystem";
 
 export default function AboutPage() {
   return (
@@ -15,6 +16,7 @@ export default function AboutPage() {
       <AboutContent />
       <WhyTheasktExists />
       <WhatMakesUsDifferent />
+      <LearningEcosystem />
       <Footer />
     </main>
   );
