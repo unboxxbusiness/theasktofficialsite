@@ -4,6 +4,7 @@ import ScholarshipsHero from "../pages/scholarships/components/scholarships-hero
 import ScholarshipsContent from "../pages/scholarships/components/scholarships-content";
 import CtaSection from "../pages/home/components/cta-section";
 import WhyWeOfferScholarships from "../pages/scholarships/components/why-we-offer-scholarships";
+import TypesOfScholarships from "../pages/scholarships/components/types-of-scholarships";
 
 export default function ScholarshipsPage() {
   return (
@@ -14,6 +15,7 @@ export default function ScholarshipsPage() {
       <ScholarshipsHero />
       <ScholarshipsContent />
       <WhyWeOfferScholarships />
+      <TypesOfScholarships />
       <CtaSection />
       <Footer />
     </main>
