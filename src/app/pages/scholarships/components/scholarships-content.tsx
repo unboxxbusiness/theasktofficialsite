@@ -39,7 +39,7 @@ export default function ScholarshipsContent() {
           <div>
             <div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
               <Image
-                src="https://picsum.photos/seed/scholarships/800/600"
+                src="https://res.cloudinary.com/dhrigocvd/image/upload/v1762921790/section_about_asceyv.png"
                 alt="Hopeful student receiving support"
                 width={800}
                 height={600}
