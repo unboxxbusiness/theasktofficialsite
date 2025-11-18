@@ -48,18 +48,18 @@ export default function DigitalAiSchoolContent() {
         </div>
 
         <div className="bg-muted rounded-2xl p-8 md:p-12">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-4xl mx-auto">
                 <div className="space-y-6 text-center">
                     <div className="flex items-center justify-center gap-3">
                         <Users className="h-8 w-8 text-primary" />
-                        <h3 className="text-2xl font-bold">Who This School Is For</h3>
+                        <h3 className="text-3xl font-bold">Who This School Is For</h3>
                     </div>
                      <p className="text-lg text-muted-foreground">Perfect for women who want to:</p>
-                    <ul className="space-y-3 grid sm:grid-cols-2 gap-x-6 gap-y-3 text-left">
+                    <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-3 pt-4 text-left">
                         {whoIsItFor.map((item, index) => (
                         <li key={index} className="flex items-start">
                             <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                            <span className="text-lg text-muted-foreground">{item}</span>
+                            <span className="text-lg">{item}</span>
                         </li>
                         ))}
                     </ul>
