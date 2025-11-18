@@ -7,6 +7,7 @@ import WhatMakesUsDifferent from "../pages/about/components/what-makes-us-differ
 import LearningEcosystem from "../pages/about/components/learning-ecosystem";
 import WhoWeServe from "../pages/about/components/who-we-serve";
 import OurApproach from "../pages/about/components/our-approach";
+import OurVision from "../pages/about/components/our-vision";
 
 export default function AboutPage() {
   return (
@@ -21,6 +22,7 @@ export default function AboutPage() {
       <LearningEcosystem />
       <WhoWeServe />
       <OurApproach />
+      <OurVision />
       <Footer />
     </main>
   );
