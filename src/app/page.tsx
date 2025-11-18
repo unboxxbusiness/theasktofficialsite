@@ -3,6 +3,7 @@ import ProblemSection from "./pages/home/components/problem-section";
 import StatsSection from "./pages/home/components/stats-section";
 import FeaturesSection from "./pages/home/components/features-section";
 import ProgramSection from "./pages/home/components/program-section";
+import OutcomesSection from "./pages/home/components/outcomes-section";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ProblemSection />
       <FeaturesSection />
       <ProgramSection />
+      <OutcomesSection />
     </main>
   );
 }
