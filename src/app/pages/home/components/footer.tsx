@@ -1,12 +1,57 @@
+import { Facebook, Instagram, Linkedin, Youtube, MessageCircle } from 'lucide-react';
+import Link from 'next/link';
+
 export default function Footer() {
     return (
-        <footer className="py-12 md:py-20 w-full">
-            <div className="container mx-auto text-center">
-                <h2 className="text-2xl font-medium lg:text-3xl mb-4">TheAskt</h2>
-                <p className="text-muted-foreground">© {new Date().getFullYear()} TheAskt. All rights reserved.</p>
-                 <div className="mt-4 space-x-4">
-                    <a href="#" className="text-sm text-muted-foreground hover:text-foreground">Privacy Policy</a>
-                    <a href="#" className="text-sm text-muted-foreground hover:text-foreground">Terms of Service</a>
+        <footer className="w-full border-t bg-background text-foreground">
+            <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
+                <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                    
+                    <div>
+                        <h3 className="mb-4 text-lg font-bold">Theaskt.org</h3>
+                        <p className="text-sm text-muted-foreground">A Learning Trust for Women</p>
+                    </div>
+
+                    <div>
+                        <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
+                        <nav className="space-y-2 text-sm">
+                            <Link href="#" className="block transition-colors hover:text-primary">Enroll Now</Link>
+                            <Link href="#" className="block transition-colors hover:text-primary">Apply for Scholarship</Link>
+                            <Link href="#" className="block transition-colors hover:text-primary">Digital & AI School</Link>
+                            <Link href="#" className="block transition-colors hover:text-primary">About The Trust</Link>
+                            <Link href="#" className="block transition-colors hover:text-primary">Community</Link>
+                            <Link href="#" className="block transition-colors hover:text-primary">Contact</Link>
+                        </nav>
+                    </div>
+
+                    <div>
+                        <h3 className="mb-4 text-lg font-semibold">Policies</h3>
+                        <nav className="space-y-2 text-sm">
+                            <Link href="#" className="block transition-colors hover:text-primary">Privacy Policy</Link>
+                            <Link href="#" className="block transition-colors hover:text-primary">Terms of Use</Link>
+                            <Link href="#" className="block transition-colors hover:text-primary">Refund Policy</Link>
+                        </nav>
+                    </div>
+
+                    <div>
+                        <h3 className="mb-4 text-lg font-semibold">Social Media</h3>
+                        <div className="flex space-x-4">
+                            <Link href="#" className="text-muted-foreground hover:text-primary"><Youtube className="h-6 w-6" /></Link>
+                            <Link href="#" className="text-muted-foreground hover:text-primary"><Instagram className="h-6 w-6" /></Link>
+                            <Link href="#" className="text-muted-foreground hover:text-primary"><Linkedin className="h-6 w-6" /></Link>
+                            <Link href="#" className="text-muted-foreground hover:text-primary"><Facebook className="h-6 w-6" /></Link>
+                            <Link href="#" className="text-muted-foreground hover:text-primary"><MessageCircle className="h-6 w-6" /></Link>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="mt-12 border-t pt-8 text-center">
+                    <p className="text-sm text-muted-foreground">
+                        © {new Date().getFullYear()} Theaskt Learning Trust. Empowering Women Across India.
+                    </p>
+                    <p className="mt-2 text-xs italic text-muted-foreground">
+                        “When a woman learns, a family rises. When a family rises, a nation grows.”
+                    </p>
                 </div>
             </div>
         </footer>
