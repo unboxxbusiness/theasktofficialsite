@@ -67,7 +67,7 @@ export default function HeroSection() {
           className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
         >
           <button className="w-60 transform rounded-lg bg-primary px-6 py-3 font-medium text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90">
-            👉 Enroll in Digital & AI School
+            Enroll Now
           </button>
         </motion.div>
         <motion.div
