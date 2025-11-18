@@ -8,6 +8,7 @@ import FAQSection from "../pages/home/components/faq-section";
 import CtaSection from "../pages/home/components/cta-section";
 import ProgramSection from "../pages/home/components/program-section";
 import WhyDigitalAiSkills from "../pages/digital-ai-school/components/why-digital-ai-skills";
+import WhatIsIncludedSection from "../pages/digital-ai-school/components/what-is-included-section";
 
 export default function DigitalAiSchoolPage() {
   return (
@@ -19,6 +20,7 @@ export default function DigitalAiSchoolPage() {
       <DigitalAiSchoolContent />
       <WhyDigitalAiSkills />
       <ProgramSection />
+      <WhatIsIncludedSection />
       <OutcomesSection />
       <HowItWorksSection />
       <FAQSection />
