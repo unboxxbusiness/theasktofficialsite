@@ -36,8 +36,7 @@ export default function JoinOurMovement() {
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Theaskt.org is more than a platform — it is a sisterhood of
-            learning and transformation. We are here to walk this journey with
-            you.
+            learning and transformation.
           </p>
         </div>
 
@@ -95,6 +94,9 @@ const Feature = ({
         <p className="text-sm text-muted-foreground max-w-xs relative z-10 px-10 text-left">
             {description}
         </p>
+        <div className="flex justify-end mt-auto pr-10">
+            <ArrowRight className="h-6 w-6 text-muted-foreground group-hover/feature:text-primary transition-colors" />
+        </div>
         </div>
     </Link>
   );
