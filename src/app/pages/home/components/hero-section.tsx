@@ -91,7 +91,7 @@ export default function HeroSection() {
         >
           <div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
             <Image
-              src="https://picsum.photos/seed/hero/1200/675"
+              src="https://res.cloudinary.com/dhrigocvd/image/upload/v1762921471/hero_banner_fnwfpn.png"
               alt="Women learning and working on laptops"
               className="aspect-[16/9] h-auto w-full object-cover"
               height={675}
