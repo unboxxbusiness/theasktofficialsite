@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 export default function AboutHero() {
-  const title = "About Theaskt.org";
+  const title = "ABOUT US — THEASKT.ORG";
   return (
     <div className="relative mx-auto my-10 flex w-full max-w-7xl flex-col items-center justify-center">
       <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
@@ -46,7 +46,7 @@ export default function AboutHero() {
           }}
           className="relative z-10 mx-auto mt-4 max-w-xl py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-400"
         >
-          A Public Learning Trust for Women
+          A Learning Trust Empowering Women & Girls Across India
         </motion.p>
       </div>
     </div>
