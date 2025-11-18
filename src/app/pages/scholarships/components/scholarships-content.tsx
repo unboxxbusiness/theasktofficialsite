@@ -1,16 +1,16 @@
-import { GraduationCap, Heart, CheckCircle } from "lucide-react";
+import { GraduationCap, Heart } from "lucide-react";
 import Image from "next/image";
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 export default function ScholarshipsContent() {
-  const whoCanApply = [
-    "Women with a long career break",
-    "Learners from low-income households",
-    "Students with high academic potential but limited means",
-    "Women facing social or economic disadvantages",
-    "Individuals nominated by our NGO partners",
+  const scholarshipFor = [
+    "Scholarships for homemakers restarting careers",
+    "Scholarships for low-income and single mothers",
+    "Scholarships for students and first-generation learners",
+    "Scholarships for survivors of domestic violence or difficult circumstances",
+    "Scholarships for women with disabilities or special needs",
   ];
 
   return (
@@ -30,13 +30,12 @@ export default function ScholarshipsContent() {
             </div>
           </div>
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold">Our Commitment</h2>
-             <p className="mt-4 text-lg font-semibold text-primary flex items-center gap-2">
-                <Heart className="h-5 w-5" />
-                Financial need should never stop a woman from learning.
+            <h2 className="text-3xl md:text-4xl font-bold">Scholarships for Women & Girls</h2>
+            <p className="mt-4 text-lg font-semibold text-primary">
+              Because Every Woman Deserves the Chance to Learn, Grow & Earn
             </p>
             <p className="text-lg text-muted-foreground">
-             Theaskt Scholarships are our promise that every deserving woman gets a chance to build her future. We offer need-based and merit-based financial aid, supported by our trust and generous donors.
+              At Theaskt.org, we believe money should never stop a woman from building her future. Our scholarship programs ensure that women and girls across India — regardless of income, location, or background — can access transformative digital and AI skills to earn from home, restart careers, or grow small businesses.
             </p>
              <div className="mt-8">
                 <Button size="lg" asChild>
@@ -50,35 +49,28 @@ export default function ScholarshipsContent() {
         </div>
 
         <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-12">
-            <div className="relative z-10 max-w-xl space-y-6">
-                <div className="flex items-center gap-3">
+            <div className="relative z-10 text-center space-y-6">
+                <div className="flex items-center justify-center gap-3">
                     <GraduationCap className="h-8 w-8 text-primary" />
-                    <h2 className="text-3xl font-bold">Who Can Apply?</h2>
-                </div>
-                <p className="text-lg text-muted-foreground">
-                    We invite applications from:
-                </p>
-            </div>
-            <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
-                <div>
-                    <ul className="space-y-3">
-                        {whoCanApply.map((item, index) => (
-                        <li key={index} className="flex items-start">
-                            <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-green-500" />
-                            <span className="text-lg">{item}</span>
-                        </li>
-                        ))}
-                    </ul>
-                </div>
-                <div className="relative">
-                    <blockquote className="border-l-4 border-primary pl-4">
-                        <p className="text-muted-foreground">"The scholarship gave me the opportunity to learn when I couldn't afford it. I am forever grateful to Theaskt for believing in me."</p>
-                        <div className="mt-6 space-y-3">
-                            <cite className="block font-medium not-italic">- Priya S., Scholarship Recipient</cite>
-                        </div>
-                    </blockquote>
+                    <h2 className="text-3xl font-bold">Who We Support</h2>
                 </div>
             </div>
+            <div>
+                <ul className="space-y-4 grid md:grid-cols-2 gap-4">
+                    {scholarshipFor.map((item, index) => (
+                    <li key={index} className="flex items-start text-lg bg-muted/50 p-4 rounded-lg">
+                        <Heart className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                        <span>{item}</span>
+                    </li>
+                    ))}
+                </ul>
+            </div>
+             <blockquote className="border-l-4 border-primary pl-4 text-center max-w-3xl mx-auto pt-8">
+                <p className="text-lg font-semibold text-muted-foreground">"The scholarship gave me the opportunity to learn when I couldn't afford it. I am forever grateful to Theaskt for believing in me."</p>
+                <div className="mt-6 space-y-3">
+                    <cite className="block font-medium not-italic">- Priya S., Scholarship Recipient</cite>
+                </div>
+            </blockquote>
         </div>
       </div>
     </section>
