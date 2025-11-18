@@ -35,7 +35,6 @@ export default function MissionSection() {
                         <p className="text-muted-foreground">"Theaskt's mission isn't just about education; it's about igniting hope and building futures. It’s a privilege to be part of this movement."</p>
                          <div className="mt-6 space-y-3">
                             <cite className="block font-medium not-italic">- Anjali D., Supporter</cite>
-                            <Image className="h-10 w-10 rounded-full object-cover" src="https://picsum.photos/seed/supporter/100/100" alt="Supporter photo" height={40} width={40} data-ai-hint="person portrait" />
                         </div>
                     </blockquote>
                 </div>
