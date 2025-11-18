@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, MessageSquare, Handshake, Share2, Youtube, Instagram, Linkedin, Facebook } from 'lucide-react';
+import { Mail, MessageSquare, Handshake, Share2, Youtube, Instagram, Linkedin, Facebook, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 
 export default function ContactDetails() {
