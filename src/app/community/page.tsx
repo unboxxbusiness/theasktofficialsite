@@ -1,11 +1,11 @@
 import Footer from "@/app/pages/home/components/footer";
 import { Navbar } from "../pages/home/components/hero-section";
-import CtaSection from "../pages/home/components/cta-section";
 import CommunityHero from "../pages/community/components/community-hero";
 import CommunityContent from "../pages/community/components/community-content";
 import CommunityActivities from "../pages/community/components/community-activities";
 import CommunityFeatures from "../pages/community/components/community-features";
 import CommunityGuidelines from "../pages/community/components/community-guidelines";
+import CommunityCta from "../pages/community/components/community-cta";
 
 export default function CommunityPage() {
   return (
@@ -18,7 +18,7 @@ export default function CommunityPage() {
       <CommunityActivities />
       <CommunityFeatures />
       <CommunityGuidelines />
-      <CtaSection />
+      <CommunityCta />
       <Footer />
     </main>
   );
