@@ -1,4 +1,4 @@
-import HeroSection from "./pages/components/hero-section";
+import HeroSection from "./pages/home/components/hero-section";
 
 export default function Home() {
   return (
