@@ -6,7 +6,7 @@ export default function PrivacyContent() {
       <div className="container mx-auto px-4">
         <div className="prose prose-lg dark:prose-invert mx-auto max-w-4xl">
           <p>
-            <strong>Effective Date:</strong> [Add Date]
+            <strong>Effective Date:</strong> 7 Sep 2025
             <br />
             <strong>Website:</strong> Theaskt.org
             <br />
