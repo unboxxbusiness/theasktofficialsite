@@ -1,6 +1,5 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
 import {
   Briefcase,
   CheckCircle,
@@ -17,7 +16,6 @@ import {
   Users,
   Zap,
 } from 'lucide-react';
-import Link from 'next/link';
 import Image from 'next/image';
 
 export function ProgramSection() {
@@ -34,7 +32,7 @@ export function ProgramSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 items-start">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
           <div className="space-y-8">
             <h3 className="text-2xl font-bold text-center md:text-left">
               Perfect For
@@ -104,12 +102,6 @@ export function ProgramSection() {
               ]}
             />
           </div>
-        </div>
-
-        <div className="text-center mt-16">
-          <Button asChild size="lg">
-            <Link href="#cta">Create Your Learning Account</Link>
-          </Button>
         </div>
       </div>
     </section>
