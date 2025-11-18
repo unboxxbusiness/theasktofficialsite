@@ -21,7 +21,7 @@ export default function CommunityContent() {
           <div>
             <div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
               <Image
-                src="https://picsum.photos/seed/community/800/600"
+                src="https://res.cloudinary.com/dhrigocvd/image/upload/v1762927984/connected_india_nvmz0g.png"
                 alt="Diverse group of women collaborating"
                 width={800}
                 height={600}
