@@ -3,6 +3,7 @@ import AboutHero from "../pages/about/components/about-hero";
 import AboutContent from "../pages/about/components/about-content";
 import { Navbar } from "../pages/home/components/hero-section";
 import WhyTheasktExists from "../pages/about/components/why-theaskt-exists";
+import WhatMakesUsDifferent from "../pages/about/components/what-makes-us-different";
 
 export default function AboutPage() {
   return (
@@ -12,6 +13,7 @@ export default function AboutPage() {
       </div>
       <AboutHero />
       <AboutContent />
+      <WhatMakesUsDifferent />
       <WhyTheasktExists />
       <Footer />
     </main>
