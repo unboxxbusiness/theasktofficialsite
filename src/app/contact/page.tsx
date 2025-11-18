@@ -4,6 +4,7 @@ import ContactHero from "../pages/contact/components/contact-hero";
 import ContactIntro from "../pages/contact/components/contact-intro";
 import ContactOptions from "../pages/contact/components/contact-options";
 import ContactDetails from "../pages/contact/components/contact-details";
+import NoteFromTeam from "../pages/contact/components/note-from-team";
 
 export default function ContactPage() {
   return (
@@ -15,6 +16,7 @@ export default function ContactPage() {
       <ContactIntro />
       <ContactOptions />
       <ContactDetails />
+      <NoteFromTeam />
       <Footer />
     </main>
   );
