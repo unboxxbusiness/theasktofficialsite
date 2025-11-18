@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
+import { ArrowRight, Globe } from "lucide-react";
+import Link from "next/link";
 
 const accordionItems = [
   {
@@ -92,8 +94,9 @@ export default function ProgramSection() {
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground leading-tight tracking-tight">
             FLAGSHIP PROGRAM: DIGITAL & AI SCHOOL
           </h2>
-          <p className="mt-4 text-lg font-semibold text-primary">
-            🌐 Learn Digital + AI Skills to Earn From Home
+          <p className="mt-4 text-lg font-semibold text-primary flex items-center justify-center md:justify-start gap-2">
+            <Globe className="h-5 w-5" />
+            Learn Digital + AI Skills to Earn From Home
           </p>
           <p className="mt-6 text-base text-muted-foreground max-w-xl mx-auto md:mx-0">
             Perfect for homemakers restarting careers, students, small business
@@ -102,12 +105,13 @@ export default function ProgramSection() {
             community, certificates, and job support.
           </p>
           <div className="mt-8">
-            <a
+            <Link
               href="#"
-              className="inline-block bg-primary text-primary-foreground font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-primary/90 transition-colors duration-300"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-primary/90 transition-colors duration-300"
             >
-              👉 Create Your Learning Account
-            </a>
+              Create Your Learning Account
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
 

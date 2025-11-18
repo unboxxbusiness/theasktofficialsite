@@ -1,3 +1,5 @@
+import { AlertTriangle } from "lucide-react";
+
 export default function ProblemSection() {
     const problems = [
         "Career break after marriage or motherhood",
@@ -26,7 +28,7 @@ export default function ProblemSection() {
                             <ul className="space-y-3">
                                 {problems.map((problem, index) => (
                                     <li key={index} className="flex items-start">
-                                        <span className="mr-2 mt-1 text-primary">⚠</span>
+                                        <AlertTriangle className="mr-2 mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                                         <span>{problem}</span>
                                     </li>
                                 ))}

@@ -1,11 +1,13 @@
+import { CheckCircle2, Sparkles, XCircle } from "lucide-react";
+
 export default function OutcomesSection() {
     const outcomes = [
-        "💰 Earn from home (part-time or full-time)",
-        "🧾 Offer freelancing services (content, design, social media)",
-        "📱 Grow a small online business",
-        "📈 Get better job opportunities",
-        "🌍 Work with clients across India & globally",
-        "✨ Build confidence & identity again",
+        "Earn from home (part-time or full-time)",
+        "Offer freelancing services (content, design, social media)",
+        "Grow a small online business",
+        "Get better job opportunities",
+        "Work with clients across India & globally",
+        "Build confidence & identity again",
     ]
 
     const doubts = [
@@ -30,6 +32,7 @@ export default function OutcomesSection() {
                         <ul className="space-y-3">
                             {outcomes.map((outcome, index) => (
                                 <li key={index} className="flex items-start">
+                                    <Sparkles className="mr-2 mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                                     <span>{outcome}</span>
                                 </li>
                             ))}
@@ -41,7 +44,7 @@ export default function OutcomesSection() {
                              <ul className="mt-4 space-y-3">
                                 {doubts.map((doubt, index) => (
                                      <li key={index} className="flex items-start">
-                                        <span className="mr-2 mt-1 text-primary">❌</span>
+                                        <XCircle className="mr-2 mt-1 h-5 w-5 flex-shrink-0 text-destructive" />
                                         <span>{doubt}</span>
                                     </li>
                                 ))}
