@@ -3,6 +3,7 @@ import { Navbar } from "../pages/home/components/hero-section";
 import ContactHero from "../pages/contact/components/contact-hero";
 import ContactIntro from "../pages/contact/components/contact-intro";
 import ContactOptions from "../pages/contact/components/contact-options";
+import ContactDetails from "../pages/contact/components/contact-details";
 
 export default function ContactPage() {
   return (
@@ -13,6 +14,7 @@ export default function ContactPage() {
       <ContactHero />
       <ContactIntro />
       <ContactOptions />
+      <ContactDetails />
       <Footer />
     </main>
   );
