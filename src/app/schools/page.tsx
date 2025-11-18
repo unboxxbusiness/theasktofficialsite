@@ -1,5 +1,5 @@
 import Footer from "@/app/pages/home/components/footer";
-import { Navbar } from "../pages/home/components/hero-section";
+import { Navbar } from "../pages/home/components/navbar";
 import SchoolsHero from "../pages/schools/components/schools-hero";
 import SchoolsIntro from "../pages/schools/components/schools-intro";
 import SchoolsList from "../pages/schools/components/schools-list";

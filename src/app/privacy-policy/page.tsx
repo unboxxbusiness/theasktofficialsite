@@ -1,5 +1,5 @@
 import Footer from "@/app/pages/home/components/footer";
-import { Navbar } from "../pages/home/components/hero-section";
+import { Navbar } from "../pages/home/components/navbar";
 import PrivacyHero from "../pages/privacy-policy/components/privacy-hero";
 import PrivacyContent from "../pages/privacy-policy/components/privacy-content";
 

@@ -1,5 +1,5 @@
 import Footer from "@/app/pages/home/components/footer";
-import { Navbar } from "../pages/home/components/hero-section";
+import { Navbar } from "../pages/home/components/navbar";
 import RefundHero from "../pages/refund-policy/components/refund-hero";
 import RefundContent from "../pages/refund-policy/components/refund-content";
 

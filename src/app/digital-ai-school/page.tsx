@@ -1,5 +1,5 @@
 import Footer from "@/app/pages/home/components/footer";
-import { Navbar } from "../pages/home/components/hero-section";
+import { Navbar } from "../pages/home/components/navbar";
 import DigitalAiSchoolHero from "../pages/digital-ai-school/components/hero";
 import DigitalAiSchoolContent from "../pages/digital-ai-school/components/content";
 import HowItWorksSection from "../pages/home/components/how-it-works-section";

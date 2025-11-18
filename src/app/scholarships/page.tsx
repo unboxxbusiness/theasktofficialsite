@@ -1,5 +1,5 @@
 import Footer from "@/app/pages/home/components/footer";
-import { Navbar } from "../pages/home/components/hero-section";
+import { Navbar } from "../pages/home/components/navbar";
 import ScholarshipsHero from "../pages/scholarships/components/scholarships-hero";
 import ScholarshipsContent from "../pages/scholarships/components/scholarships-content";
 import CtaSection from "../pages/home/components/cta-section";

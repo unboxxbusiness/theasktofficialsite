@@ -1,5 +1,5 @@
 import Footer from "@/app/pages/home/components/footer";
-import { Navbar } from "../pages/home/components/hero-section";
+import { Navbar } from "../pages/home/components/navbar";
 import CommunityHero from "../pages/community/components/community-hero";
 import CommunityContent from "../pages/community/components/community-content";
 import CommunityActivities from "../pages/community/components/community-activities";

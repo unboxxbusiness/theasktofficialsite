@@ -1,5 +1,5 @@
 import Footer from "@/app/pages/home/components/footer";
-import { Navbar } from "../pages/home/components/hero-section";
+import { Navbar } from "../pages/home/components/navbar";
 import ContactHero from "../pages/contact/components/contact-hero";
 import ContactIntro from "../pages/contact/components/contact-intro";
 import ContactOptions from "../pages/contact/components/contact-options";
