@@ -1,55 +1,66 @@
-import { CheckCircle2, Sparkles, XCircle } from "lucide-react";
+import { CheckCircle2, Sparkles, XCircle, Zap, TrendingUp } from "lucide-react";
 
 export default function OutcomesSection() {
     const outcomes = [
         "Earn from home (part-time or full-time)",
-        "Offer freelancing services (content, design, social media)",
-        "Grow a small online business",
-        "Get better job opportunities",
-        "Work with clients across India & globally",
-        "Build confidence & identity again",
+        "Offer freelancing services",
+        "Grow a home-business (baking, boutique, beauty, coaching, etc.)",
+        "Manage social media for small businesses",
+        "Apply for digital/AI-assisted jobs",
+        "Build confidence & professional identity again",
     ]
 
-    const doubts = [
-        "You have a long career gap",
-        "Your English is not strong",
-        "You only have a mobile phone",
-        "You’ve never worked before",
+    const earnings = [
+        {
+            level: "Starting",
+            range: "₹8,000 – ₹25,000/month",
+        },
+        {
+            level: "With Experience",
+            range: "₹30,000 – ₹60,000/month",
+        },
+        {
+            level: "Advanced",
+            range: "Higher for advanced freelancers & service providers",
+        },
     ]
 
     return (
         <section className="py-16 md:py-32">
             <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-12">
-                <div className="relative z-10 max-w-xl space-y-6">
-                    <h2 className="text-4xl font-medium lg:text-5xl">What Can You Do After Learning?</h2>
+                <div className="relative z-10 max-w-2xl space-y-6">
+                    <h2 className="text-4xl font-medium lg:text-5xl">Outcomes You Can Achieve</h2>
                     <p>
-                        You will have the skills and confidence to build a career on your own terms.
+                        After training, learners can:
                     </p>
                 </div>
-                <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
+                <div className="grid gap-12 sm:grid-cols-2 md:gap-16">
                     <div className="space-y-6">
-                        <h3 className="text-2xl font-semibold">You will be able to:</h3>
                         <ul className="space-y-3">
                             {outcomes.map((outcome, index) => (
                                 <li key={index} className="flex items-start">
-                                    <Sparkles className="mr-2 mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                                    <Sparkles className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                                     <span>{outcome}</span>
                                 </li>
                             ))}
                         </ul>
                     </div>
                     <div className="relative">
-                        <blockquote className="border-l-4 border-primary pl-4">
-                            <h3 className="text-2xl font-semibold">Even if...</h3>
-                             <ul className="mt-4 space-y-3">
-                                {doubts.map((doubt, index) => (
-                                     <li key={index} className="flex items-start">
-                                        <XCircle className="mr-2 mt-1 h-5 w-5 flex-shrink-0 text-destructive" />
-                                        <span>{doubt}</span>
+                        <div className="border-l-4 border-primary pl-4">
+                            <h3 className="text-2xl font-semibold flex items-center gap-2">
+                                <TrendingUp className="h-6 w-6" />
+                                Typical Earning Potential
+                            </h3>
+                             <p className="text-sm text-muted-foreground mt-1">(varies by skill & effort)</p>
+                             <ul className="mt-6 space-y-4">
+                                {earnings.map((earning, index) => (
+                                     <li key={index}>
+                                        <p className="font-semibold">{earning.range}</p>
+                                        <p className="text-sm text-muted-foreground">{earning.level}</p>
                                     </li>
                                 ))}
                             </ul>
-                        </blockquote>
+                        </div>
                     </div>
                 </div>
             </div>
