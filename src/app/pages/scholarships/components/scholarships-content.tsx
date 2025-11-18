@@ -1,17 +1,36 @@
 import { GraduationCap, Heart } from "lucide-react";
 import Image from "next/image";
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Users, Store, Briefcase, Handshake } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import React from "react";
+import { cn } from "@/lib/utils";
+
+
+const scholarshipFor = [
+    {
+        title: "Homemakers Restarting Careers",
+        icon: <Heart />,
+    },
+    {
+        title: "Low-Income & Single Mothers",
+        icon: <Users />,
+    },
+    {
+        title: "Students & First-Gen Learners",
+        icon: <GraduationCap />,
+    },
+    {
+        title: "Survivors of Difficult Circumstances",
+        icon: <Handshake />,
+    },
+    {
+        title: "Women with Disabilities",
+        icon: <Briefcase />,
+    },
+];
 
 export default function ScholarshipsContent() {
-  const scholarshipFor = [
-    "Scholarships for homemakers restarting careers",
-    "Scholarships for low-income and single mothers",
-    "Scholarships for students and first-generation learners",
-    "Scholarships for survivors of domestic violence or difficult circumstances",
-    "Scholarships for women with disabilities or special needs",
-  ];
 
   return (
     <section className="py-16 md:py-24 w-full">
@@ -48,22 +67,17 @@ export default function ScholarshipsContent() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-12">
+        <div className="mx-auto max-w-7xl space-y-8 px-6 md:space-y-12">
             <div className="relative z-10 text-center space-y-6">
                 <div className="flex items-center justify-center gap-3">
                     <GraduationCap className="h-8 w-8 text-primary" />
                     <h2 className="text-3xl font-bold">Who We Support</h2>
                 </div>
             </div>
-            <div>
-                <ul className="space-y-4 grid md:grid-cols-2 gap-4">
-                    {scholarshipFor.map((item, index) => (
-                    <li key={index} className="flex items-start text-lg bg-muted/50 p-4 rounded-lg">
-                        <Heart className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                        <span>{item}</span>
-                    </li>
-                    ))}
-                </ul>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative z-10 py-10 max-w-7xl mx-auto">
+                {scholarshipFor.map((feature, index) => (
+                    <Feature key={feature.title} {...feature} index={index} />
+                ))}
             </div>
              <blockquote className="border-l-4 border-primary pl-4 text-center max-w-3xl mx-auto pt-8">
                 <p className="text-lg font-semibold text-muted-foreground">"The scholarship gave me the opportunity to learn when I couldn't afford it. I am forever grateful to Theaskt for believing in me."</p>
@@ -76,3 +90,37 @@ export default function ScholarshipsContent() {
     </section>
   );
 }
+
+
+const Feature = ({
+  title,
+  icon,
+  index,
+}: {
+  title: string;
+  icon: React.ReactNode;
+  index: number;
+}) => {
+  return (
+    <div
+      className={cn(
+        "flex flex-col lg:border-r py-10 relative group/feature dark:border-neutral-800",
+        (index === 0 || index === 3) && "lg:border-l dark:border-neutral-800",
+        index < 3 && "lg:border-b dark:border-neutral-800"
+      )}
+    >
+      <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
+      <div className="mb-4 relative z-10 px-10 text-primary">
+        {React.cloneElement(icon as React.ReactElement, {
+            className: "h-8 w-8",
+        })}
+      </div>
+      <div className="text-lg font-bold mb-2 relative z-10 px-10">
+        <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-300 dark:bg-neutral-700 group-hover/feature:bg-accent transition-all duration-200 origin-center" />
+        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-foreground text-left">
+          {title}
+        </span>
+      </div>
+    </div>
+  );
+};
