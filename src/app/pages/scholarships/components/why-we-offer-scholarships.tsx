@@ -1,6 +1,7 @@
 "use client";
 
 import { AlertTriangle } from "lucide-react";
+import Image from "next/image";
 
 export default function WhyWeOfferScholarships() {
   const challenges = [
@@ -13,33 +14,41 @@ export default function WhyWeOfferScholarships() {
 
   return (
     <section className="py-16 md:py-24 bg-muted w-full">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center space-y-6 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Why We Offer Scholarships
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Millions of Indian women want to learn and earn, but struggle due to:
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <ul className="space-y-4">
-                {challenges.map((challenge, index) => (
-                    <li key={index} className="flex items-start bg-background p-4 rounded-lg">
-                        <AlertTriangle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                        <span className="text-lg">{challenge}</span>
-                    </li>
-                ))}
-            </ul>
-            <div className="flex flex-col items-center justify-center bg-background p-8 rounded-lg">
-                <p className="text-xl font-semibold text-center text-foreground">
-                    No woman should be denied education because she cannot afford it.
-                </p>
-                <p className="text-lg italic text-center text-primary mt-4">
-                    Our scholarships are created to support her first step toward independence.
-                </p>
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="grid items-center gap-12 md:grid-cols-2 md:gap-12 lg:grid-cols-5 lg:gap-24">
+          <div className="lg:col-span-2">
+            <div className="md:pr-6 lg:pr-0">
+              <h2 className="text-4xl font-semibold lg:text-5xl">
+                Why We Offer Scholarships
+              </h2>
+              <p className="mt-6 text-muted-foreground">
+                Millions of Indian women want to learn and earn, but struggle
+                due to:
+              </p>
             </div>
+            <ul className="mt-8 divide-y border-y">
+              {challenges.map((challenge, index) => (
+                <li key={index} className="flex items-center gap-4 py-3">
+                  <AlertTriangle className="size-5 text-primary" />
+                  <span className="font-medium">{challenge}</span>
+                </li>
+              ))}
+            </ul>
+             <p className="mt-8 font-semibold text-lg text-primary">
+              No woman should be denied education because she cannot afford it. Our scholarships are created to support her first step toward independence.
+            </p>
+          </div>
+          <div className="border-border/50 relative rounded-3xl border p-3 lg:col-span-3">
+            <div className="aspect-[4/3] relative rounded-2xl">
+              <Image
+                src="https://picsum.photos/seed/scholarship-why/1200/900"
+                className="rounded-[15px] object-cover"
+                alt="Woman overcoming challenges"
+                fill
+                data-ai-hint="woman hope challenge"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
