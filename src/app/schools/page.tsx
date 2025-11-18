@@ -8,6 +8,7 @@ import MissionSection from "../pages/schools/components/mission-section";
 import WhyJoinWaitlist from "../pages/schools/components/why-join-waitlist";
 import WhyMultipleSchools from "../pages/schools/components/why-multiple-schools";
 import LearningPath from "../pages/schools/components/learning-path";
+import ForPartners from "../pages/schools/components/for-partners";
 
 export default function SchoolsPage() {
   return (
@@ -22,6 +23,7 @@ export default function SchoolsPage() {
       <WhyJoinWaitlist />
       <WhyMultipleSchools />
       <LearningPath />
+      <ForPartners />
       <CtaSection />
       <Footer />
     </main>
