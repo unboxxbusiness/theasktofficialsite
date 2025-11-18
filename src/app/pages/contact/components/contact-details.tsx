@@ -14,7 +14,11 @@ export default function ContactDetails() {
           </h2>
         </div>
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <div className="bg-background p-8 rounded-lg border flex flex-col">
+          <HoverBorderGradient
+            containerClassName="rounded-lg"
+            as="div"
+            className="h-full"
+          >
             <div className="flex items-center gap-4 mb-4">
               <Mail className="h-8 w-8 text-primary" />
               <h3 className="text-2xl font-semibold">Email Support</h3>
@@ -26,11 +30,11 @@ export default function ContactDetails() {
             <p className="text-sm text-muted-foreground mt-2">
               We reply within 24–72 hours (Mon–Sat).
             </p>
-          </div>
+          </HoverBorderGradient>
           <HoverBorderGradient
             containerClassName="rounded-lg"
             as="div"
-            className="bg-background p-8 rounded-lg flex flex-col"
+             className="h-full"
           >
             <div className="flex items-center gap-4 mb-4">
               <MessageSquare className="h-8 w-8 text-primary" />
@@ -44,7 +48,11 @@ export default function ContactDetails() {
               A dedicated WhatsApp learning & helpdesk channel.
             </p>
           </HoverBorderGradient>
-           <div className="bg-background p-8 rounded-lg border flex flex-col">
+           <HoverBorderGradient
+            containerClassName="rounded-lg"
+            as="div"
+             className="h-full"
+          >
             <div className="flex items-center gap-4 mb-4">
               <Handshake className="h-8 w-8 text-primary" />
               <h3 className="text-2xl font-semibold">Trust / Admin & Partnerships</h3>
@@ -53,8 +61,12 @@ export default function ContactDetails() {
             <a href="mailto:partnerships@theaskt.org" className="text-primary font-bold text-lg hover:underline break-all">
               partnerships@theaskt.org
             </a>
-          </div>
-           <div className="bg-background p-8 rounded-lg border flex flex-col">
+          </HoverBorderGradient>
+           <HoverBorderGradient
+            containerClassName="rounded-lg"
+            as="div"
+             className="h-full"
+          >
             <div className="flex items-center gap-4 mb-4">
               <Share2 className="h-8 w-8 text-primary" />
               <h3 className="text-2xl font-semibold">Follow Us</h3>
@@ -70,7 +82,7 @@ export default function ContactDetails() {
                     <span className="font-semibold">Community (soon)</span>
                 </Link>
             </div>
-          </div>
+          </HoverBorderGradient>
         </div>
       </div>
     </section>
