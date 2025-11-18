@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
 import React from "react";
 
@@ -32,7 +32,7 @@ export const Navbar = () => {
       </div>
       <div className="hidden md:block">
         <Button asChild>
-            <Link href="/digital-ai-school">
+            <Link href="https://edu.theaskt.org" target="_blank" rel="noopener noreferrer">
                 Enroll Now
             </Link>
         </Button>
@@ -48,6 +48,7 @@ export const Navbar = () => {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background p-0">
+            <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
             <div className="flex flex-col h-full">
               <div className="flex items-center justify-between border-b px-6 py-4">
                  <Link href="/" className="flex items-center gap-2">
@@ -72,7 +73,7 @@ export const Navbar = () => {
               <div className="mt-auto p-6">
                 <SheetClose asChild>
                     <Button asChild className="w-full" size="lg">
-                        <Link href="/digital-ai-school">
+                        <Link href="https://edu.theaskt.org" target="_blank" rel="noopener noreferrer">
                             Enroll Now
                         </Link>
                     </Button>
