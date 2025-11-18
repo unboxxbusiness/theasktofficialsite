@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import './globals.css';
+import ScrollToTopButton from '@/components/ui/scroll-to-top-button';
 
 export const metadata: Metadata = {
   title: 'TheAskt',
@@ -20,6 +21,7 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         {children}
+        <ScrollToTopButton />
       </body>
     </html>
   );
