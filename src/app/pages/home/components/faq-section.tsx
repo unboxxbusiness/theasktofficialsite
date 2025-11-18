@@ -13,51 +13,35 @@ export default function FAQSection() {
   const faqItems = [
     {
       id: 'item-1',
-      question: 'Can I learn if I have a long career gap?',
-      answer:
-        'Yes. Many of our most successful learners join after years away from a professional environment. Our courses are designed to ease you back in.',
+      question: 'Q1: I have a long career break. Can I still join?',
+      answer: 'Yes! Many learners are restarting after years.',
     },
     {
       id: 'item-2',
-      question: 'Can I learn from my phone?',
-      answer:
-        'Yes! Our entire platform and all course materials are fully mobile-friendly, so you can learn anytime, anywhere.',
+      question: 'Q2: Can I learn only from mobile?',
+      answer: 'Yes. Lessons are created for mobile-first learners.',
     },
     {
       id: 'item-3',
-      question: 'Do I need a strong English or tech background?',
-      answer:
-        'No. We teach in simple, accessible language and start from the very basics. No prior tech knowledge is required to begin.',
+      question: 'Q3: Do I need strong English or technical knowledge?',
+      answer: 'No. Simple language, step-by-step guidance.',
     },
     {
       id: 'item-4',
-      question: 'Will I get a certificate?',
-      answer:
-        'Yes, you will receive a verifiable certificate upon successful completion of our programs, which you can add to your resume and social profiles.',
+      question: 'Q4: Will I get a certificate?',
+      answer: 'Yes, for completed modules and skill tracks.',
     },
     {
       id: 'item-5',
-      question: 'Are there free & scholarship options?',
+      question: 'Q5: Will you help me earn?',
       answer:
-        'Absolutely. We are a public trust committed to accessible education. We offer a mix of free courses, low-cost programs, and scholarship seats.',
+        'Yes. Freelancing, remote work, and home-business support is included.',
     },
     {
       id: 'item-6',
-      question: 'What if I have family responsibilities?',
+      question: 'Q6: Is this safe for women?',
       answer:
-        'Our courses are self-paced and designed for flexibility. You can make progress with as little as 30-60 minutes a day, whenever it fits your schedule.',
-    },
-    {
-      id: 'item-7',
-      question: 'Is this a safe learning environment for women?',
-      answer:
-        'Yes. We provide a respectful, supportive, and women-only community to ensure a safe and comfortable learning experience.',
-    },
-    {
-      id: 'item-8',
-      question: 'Will you help me find work or earn money?',
-      answer:
-        'Yes, our programs include practical support for freelancing, finding remote work, and even starting your own small business.',
+        'Yes. Community and learning spaces are carefully moderated.',
     },
   ]
 
