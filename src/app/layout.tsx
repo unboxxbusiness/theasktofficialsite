@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import ScrollToTopButton from '@/components/ui/scroll-to-top-button';
 import SocialLinks, { SocialLink } from '@/components/ui/social-links';
+import { Analytics } from '@/components/analytics';
 
 const socialLinks: SocialLink[] = [
   { platform: 'linkedin', href: 'https://www.linkedin.com/company/theaskt' },
@@ -110,6 +111,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased">
+        <Analytics />
         <SocialLinks links={socialLinks} />
         {children}
         <ScrollToTopButton />
