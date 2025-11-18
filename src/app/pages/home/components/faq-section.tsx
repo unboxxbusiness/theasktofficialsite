@@ -9,7 +9,6 @@ import {
 } from '@/components/ui/accordion'
 import { Button } from '@/components/ui/button'
 import { PhoneCall } from 'lucide-react'
-import { Badge } from '@/components/ui/badge'
 
 export default function FAQSection() {
   const faqItems = [
@@ -69,7 +68,7 @@ export default function FAQSection() {
         <div className="grid lg:grid-cols-2 gap-10">
           <div className="flex flex-col gap-8">
             <div>
-              <Badge variant="outline">FAQ</Badge>
+              <span className="inline-flex items-center rounded-full border border-border px-2.5 py-0.5 text-xs font-semibold text-foreground transition-colors">FAQ</span>
             </div>
             <div className="flex flex-col gap-4">
               <h2 className="text-3xl md:text-5xl tracking-tighter max-w-xl font-regular">
