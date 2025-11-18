@@ -20,7 +20,8 @@ export const Navbar = () => {
   return (
     <nav className="flex w-full items-center justify-between border-b border-t border-neutral-200 px-4 py-4 dark:border-neutral-800">
       <Link href="/" className="flex items-center gap-2">
-        <Image src="https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png" alt="TheAskt Logo" width={120} height={30} />
+        <Image src="https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png" alt="TheAskt Logo" width={120} height={30} className="dark:hidden" />
+        <Image src="https://res.cloudinary.com/dhrigocvd/image/upload/v1762930767/ask_foundation_final_logo2_tqznhh.png" alt="TheAskt Logo" width={120} height={30} className="hidden dark:block" />
       </Link>
       
       {/* Desktop Navigation */}
@@ -55,7 +56,8 @@ export const Navbar = () => {
             <div className="flex flex-col h-full">
               <div className="flex items-center justify-between border-b px-6 py-4">
                  <Link href="/" className="flex items-center gap-2">
-                    <Image src="https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png" alt="TheAskt Logo" width={120} height={30} />
+                    <Image src="https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png" alt="TheAskt Logo" width={120} height={30} className="dark:hidden" />
+                    <Image src="https://res.cloudinary.com/dhrigocvd/image/upload/v1762930767/ask_foundation_final_logo2_tqznhh.png" alt="TheAskt Logo" width={120} height={30} className="hidden dark:block" />
                 </Link>
                 <SheetClose asChild>
                    <Button variant="ghost" size="icon">
