@@ -38,12 +38,12 @@ export default function HowItWorksSection() {
         <div className="relative z-10 text-center space-y-6 mb-12">
           <h2 className="text-4xl font-medium lg:text-5xl">How It Works</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
           {features.map((feature, index) => (
             <Feature key={feature.title} {...feature} index={index} />
           ))}
         </div>
-        <div className="text-center mt-12">
+        <div className="text-center mt-16">
             <a href="#" className="inline-block bg-primary text-primary-foreground font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-primary/90 transition-colors duration-300">
                 👉 Start Your Learning Journey
             </a>
@@ -57,23 +57,22 @@ const Feature = ({
   title,
   description,
   icon,
+  index
 }: {
   title: string;
   description: string;
   icon: React.ReactNode;
+  index: number;
 }) => {
   return (
-    <div className="flex flex-col border rounded-lg p-6 relative group/feature bg-card">
+    <div className="flex flex-col border rounded-lg p-6 text-center items-center relative group/feature bg-card/50">
         <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
       <div className="mb-4 relative z-10 text-primary">
         {React.cloneElement(icon as React.ReactElement, { className: "h-8 w-8"})}
       </div>
-      <div className="text-lg font-bold mb-2 relative z-10">
-        <div className="absolute left-0 -ml-6 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-300 dark:bg-neutral-700 group-hover/feature:bg-accent transition-all duration-200 origin-center" />
-        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-foreground">
-          {title}
-        </span>
-      </div>
+      <h3 className="text-lg font-bold mb-2 relative z-10 text-foreground">
+        {title}
+      </h3>
       <p className="text-sm text-muted-foreground max-w-xs relative z-10">
         {description}
       </p>

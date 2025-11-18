@@ -5,6 +5,7 @@ import FeaturesSection from "./pages/home/components/features-section";
 import ProgramSection from "./pages/home/components/program-section";
 import OutcomesSection from "./pages/home/components/outcomes-section";
 import HowItWorksSection from "./pages/home/components/how-it-works-section";
+import FutureSchoolsSection from "./pages/home/components/future-schools-section";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ProgramSection />
       <OutcomesSection />
       <HowItWorksSection />
+      <FutureSchoolsSection />
     </main>
   );
 }
