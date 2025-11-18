@@ -1,9 +1,5 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Mail, GraduationCap, Handshake, Info } from "lucide-react"
 
 export default function ContactContent() {
@@ -22,26 +18,6 @@ export default function ContactContent() {
                     </div>
 
                     <div className="space-y-8">
-                        <div className="space-y-8 bg-muted p-8 rounded-lg">
-                            <h3 className="text-2xl font-bold">Get in Touch</h3>
-                            <form className="space-y-4">
-                                <Input placeholder="Your Name" />
-                                <Input type="email" placeholder="Your Email" />
-                                <Select>
-                                    <SelectTrigger>
-                                        <SelectValue placeholder="Reason for contacting us" />
-                                    </SelectTrigger>
-                                    <SelectContent>
-                                        <SelectItem value="admission">Admissions & Courses</SelectItem>
-                                        <SelectItem value="scholarship">Scholarships</SelectItem>
-                                        <SelectItem value="partnership">Partnerships & Sponsorships</SelectItem>
-                                        <SelectItem value="general">General Inquiry</SelectItem>
-                                    </SelectContent>
-                                </Select>
-                                <Textarea placeholder="Your Message" rows={4} />
-                                <Button type="submit" size="lg" className="w-full">Send Message</Button>
-                            </form>
-                        </div>
                         <div className="space-y-8 bg-muted p-8 rounded-lg">
                             <h3 className="text-2xl font-bold">Contact Information</h3>
                             <div className="space-y-6">
