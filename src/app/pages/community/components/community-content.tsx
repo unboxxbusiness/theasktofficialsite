@@ -1,5 +1,7 @@
-import { Users } from "lucide-react";
+import { Users, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function CommunityContent() {
 
@@ -27,6 +29,14 @@ export default function CommunityContent() {
             <p className="text-lg text-muted-foreground">
               This is not just another online group. It is a sisterhood of learning, confidence, and financial independence.
             </p>
+            <div className="mt-8">
+                <Button size="lg" asChild>
+                    <Link href="#" className="inline-flex items-center gap-2">
+                        Join Our Community
+                        <ArrowRight className="h-4 w-4" />
+                    </Link>
+                </Button>
+             </div>
           </div>
         </div>
 
