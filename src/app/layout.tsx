@@ -4,6 +4,7 @@ import ScrollToTopButton from '@/components/ui/scroll-to-top-button';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Navbar } from './pages/home/components/navbar';
 import { AnalyticsProvider } from '@/components/analytics-provider';
+import { SocialShareDock } from '@/components/ui/social-share-dock';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://theaskt.org'),
@@ -119,6 +120,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <ScrollToTopButton />
+          <SocialShareDock />
         </ThemeProvider>
       </body>
     </html>
