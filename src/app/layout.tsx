@@ -20,10 +20,10 @@ export const metadata: Metadata = {
     siteName: 'TheAskt.org',
     images: [
       {
-        url: 'https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png',
+        url: 'https://res.cloudinary.com/dhrigocvd/image/upload/w_1200,h_630,c_fill,f_auto,q_auto/v1763530822/ask_icon_light_phee5f.png',
         width: 1200,
         height: 630,
-        alt: 'TheAskt.org Logo',
+        alt: 'Theaskt.org Mission Logo',
       },
     ],
     locale: 'en_US',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: 'TheAskt.org | Digital & AI Skills for Women in India',
     description: 'Empowering women in India with digital and AI skills to restart careers and achieve financial independence.',
     creator: '@theaskt',
-    images: ['https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png'],
+    images: ['https://res.cloudinary.com/dhrigocvd/image/upload/w_1200,h_630,c_fill,f_auto,q_auto/v1763530822/ask_icon_light_phee5f.png'],
   },
   robots: {
     index: true,
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: 'https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png',
-    shortcut: 'https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png',
-    apple: 'https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png',
+    icon: 'https://res.cloudinary.com/dhrigocvd/image/upload/w_32,h_32,c_fill,f_auto,q_auto/v1763530822/ask_icon_light_phee5f.png',
+    shortcut: 'https://res.cloudinary.com/dhrigocvd/image/upload/w_32,h_32,c_fill,f_auto,q_auto/v1763530822/ask_icon_light_phee5f.png',
+    apple: 'https://res.cloudinary.com/dhrigocvd/image/upload/w_180,h_180,c_fill,f_auto,q_auto/v1763530822/ask_icon_light_phee5f.png',
   },
 };
 
