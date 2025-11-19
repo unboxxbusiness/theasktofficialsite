@@ -13,7 +13,6 @@ import {
 } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 
-
 type Platform =
   | "linkedin"
   | "instagram"
@@ -108,6 +107,27 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
 }) => {
   const [mobileDockOpen, setMobileDockOpen] = React.useState(false);
 
+  const handleShare = async () => {
+    // 1. Check if Web Share API is supported
+    if (navigator.share) {
+      try {
+        // 2. Define the content to share
+        await navigator.share({
+          title: "Theaskt.org | Empowering Women Across India",
+          text: "I found this incredible platform, Theaskt.org, that's empowering women in India with digital and AI skills to restart careers and earn from home. Join the movement!",
+          url: "https://theaskt.org",
+        });
+      } catch (error) {
+        console.error("Error sharing:", error);
+        // If user cancels share, do nothing. If there's an error, fallback to dock.
+        setMobileDockOpen(!mobileDockOpen);
+      }
+    } else {
+      // 3. Fallback for unsupported browsers
+      setMobileDockOpen(!mobileDockOpen);
+    }
+  };
+
   if (!showOnMobile) {
     return null;
   }
@@ -169,10 +189,10 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
 
           {/* Floating Button */}
           <button
-            onClick={() => setMobileDockOpen(!mobileDockOpen)}
+            onClick={handleShare}
             className={`relative flex items-center justify-center w-16 h-16 rounded-full shadow-2xl active:scale-95
                        transition-all duration-300 border border-border overflow-hidden ${floatingButtonColor}`}
-            aria-label="Toggle social links"
+            aria-label="Share this website"
           >
             <div className="relative z-10">
               {mobileDockOpen ? (
