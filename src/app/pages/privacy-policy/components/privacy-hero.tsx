@@ -44,7 +44,7 @@ export default function PrivacyHero() {
             duration: 0.3,
             delay: 0.8,
           }}
-          className="relative z-10 mx-auto mt-4 max-w-2xl py-4 text-center text-lg font-semibold text-primary dark:text-primary-foreground"
+          className="relative z-10 mx-auto mt-4 max-w-2xl py-4 text-center text-lg font-semibold text-muted-foreground"
         >
           Your Trust and Privacy Are Important to Us
         </motion.p>
