@@ -35,7 +35,14 @@ export const SocialShareDock = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      
+      // Show after scrolling 30% of the page
+      const scrollThreshold = (documentHeight - windowHeight) * 0.3;
+
+      if (scrollPosition > scrollThreshold) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -43,6 +50,9 @@ export const SocialShareDock = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
+    // Initial check
+    handleScroll();
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
