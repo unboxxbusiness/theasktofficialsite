@@ -41,12 +41,16 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'https',
+        protocol: 'httpshttps',
         hostname: 'res.cloudinary.com',
         port: '',
         pathname: '/**',
       }
     ],
+  },
+  webpack: (config, { isServer }) => {
+    // an empty webpack function can help resolve caching issues
+    return config;
   },
 };
 
