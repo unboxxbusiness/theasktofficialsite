@@ -107,7 +107,7 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
 
   React.useEffect(() => {
     if (typeof window !== "undefined") {
-      setPageUrl(window.location.origin + pathname);
+      setPageUrl(window.location.href);
     }
   }, [pathname]);
 
@@ -138,23 +138,23 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
     }
   };
 
-  const handleShare = async () => {
+  const handleShare = () => {
     if (navigator.share) {
-      try {
-        await navigator.share({
-          title: shareData.title,
-          text: shareData.text,
-          url: pageUrl,
-        });
-      } catch (error) {
-        if (error instanceof DOMException && error.name === 'AbortError') {
-          // User cancelled the share sheet. Silently ignore.
-        } else {
-          console.error("Error sharing:", error);
-          setMobileDockOpen(!mobileDockOpen);
+      navigator.share({
+        title: shareData.title,
+        text: shareData.text,
+        url: pageUrl,
+      })
+      .catch((error) => {
+        // Silently ignore AbortError which is triggered when the user cancels the share dialog
+        if (error.name === 'AbortError') {
+          return;
         }
-      }
+        console.error("Error sharing:", error);
+        setMobileDockOpen(!mobileDockOpen);
+      });
     } else {
+      // Fallback for browsers that do not support Web Share API
       setMobileDockOpen(!mobileDockOpen);
     }
   };
