@@ -71,6 +71,7 @@ export default function RootLayout({
     const showDialog = () => {
       const hasBeenShown = sessionStorage.getItem('shareDialogShown');
       if (hasBeenShown) {
+        window.removeEventListener('scroll', showDialog);
         return;
       }
 
@@ -80,14 +81,14 @@ export default function RootLayout({
       
       const scrollThreshold = (documentHeight - windowHeight) * 0.4;
 
-      if (scrollPosition > scrollThreshold) {
+      if (scrollThreshold > 0 && scrollPosition > scrollThreshold) {
         setShareDialogOpen(true);
         sessionStorage.setItem('shareDialogShown', 'true');
         window.removeEventListener('scroll', showDialog);
       }
     };
     
-    window.addEventListener('scroll', showDialog);
+    window.addEventListener('scroll', showDialog, { passive: true });
 
     // Cleanup
     return () => window.removeEventListener('scroll', showDialog);
