@@ -118,9 +118,15 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
           url: "https://theaskt.org",
         });
       } catch (error) {
-        console.error("Error sharing:", error);
-        // If user cancels share, do nothing. If there's an error, fallback to dock.
-        setMobileDockOpen(!mobileDockOpen);
+        // This error is commonly thrown when the user cancels the share dialog.
+        // We check if it's an AbortError and, if so, we do nothing.
+        if (error instanceof DOMException && error.name === 'AbortError') {
+          // User cancelled the share sheet. Silently ignore.
+        } else {
+          console.error("Error sharing:", error);
+          // For other errors, fallback to opening the dock.
+          setMobileDockOpen(!mobileDockOpen);
+        }
       }
     } else {
       // 3. Fallback for unsupported browsers
