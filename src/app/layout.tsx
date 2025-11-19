@@ -1,18 +1,9 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import ScrollToTopButton from '@/components/ui/scroll-to-top-button';
-import SocialLinks, { SocialLink } from '@/components/ui/social-links';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Navbar } from './pages/home/components/navbar';
 import { AnalyticsProvider } from '@/components/analytics-provider';
-
-const socialLinks: SocialLink[] = [
-  { platform: 'linkedin', href: 'https://www.linkedin.com/company/theaskt' },
-  { platform: 'instagram', href: 'https://www.instagram.com/the_askt/' },
-  { platform: 'facebook', href: 'https://www.facebook.com/theasktorg' },
-  { platform: 'x', href: 'https://x.com/theaskt' },
-  { platform: 'mail', href: 'mailto:support@theaskt.org' },
-];
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://theaskt.org'),
@@ -126,7 +117,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <SocialLinks links={socialLinks} />
           {children}
           <ScrollToTopButton />
         </ThemeProvider>
