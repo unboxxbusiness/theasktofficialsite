@@ -26,16 +26,12 @@ type Platform =
 
 export interface SocialLink {
   platform: Platform;
-  href: string; // This will now be the base profile URL, not the share URL
+  href: string;
 }
 
 export interface SocialLinksProps {
   links: SocialLink[];
   showOnMobile?: boolean;
-  /**
-   * Custom Tailwind color class or raw CSS color
-   * Example: "bg-slate-700" | "#00ff00" | "rgb(0,255,0)"
-   */
   floatingButtonColor?: string;
 }
 
@@ -60,14 +56,13 @@ const PLATFORM_STYLES: Record<Platform, PlatformStyle> = {
     hoverGradient: "from-pink-500 via-purple-500 to-orange-400",
   },
   github: {
-  label: "GitHub",
-  icon: FaGithub,
-  gradient:
-    "from-zinc-800 to-zinc-600 dark:from-[hsl(var(--muted-foreground))] dark:to-[hsl(var(--foreground))]",
-  hoverGradient:
-    "from-zinc-700 to-zinc-500 dark:from-[hsl(var(--muted-foreground))] dark:to-[hsl(var(--foreground)/0.8)]",
-},
-
+    label: "GitHub",
+    icon: FaGithub,
+    gradient:
+      "from-zinc-800 to-zinc-600 dark:from-[hsl(var(--muted-foreground))] dark:to-[hsl(var(--foreground))]",
+    hoverGradient:
+      "from-zinc-700 to-zinc-500 dark:from-[hsl(var(--muted-foreground))] dark:to-[hsl(var(--foreground)/0.8)]",
+  },
   mail: {
     label: "Mail",
     icon: FaEnvelope,
@@ -136,7 +131,6 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
         return `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${twitterText}`;
       case "mail":
         return `mailto:?subject=${encodedTitle}&body=${encodedText}%0A%0A${encodedUrl}`;
-      // Instagram doesn't have a direct web share link, so it will link to the profile.
       case "instagram":
         return links.find(l => l.platform === 'instagram')?.href || '#';
       default:
@@ -180,7 +174,6 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
         )}
 
         <div className="relative">
-          {/* Floating Icons */}
           <div
             className={`absolute bottom-20 left-0 flex flex-col-reverse gap-3 transition-all duration-500 ${
               mobileDockOpen
@@ -193,8 +186,6 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
               if (!style) return null;
               const Icon = style.icon;
               const shareUrl = getShareUrl(platform);
-
-              // For Instagram, we can't share a link directly, so we just open the profile.
               const isShareLink = platform !== 'instagram';
 
               return (
@@ -215,8 +206,6 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
                   >
                     <Icon size={22} className="text-white" />
                   </div>
-
-                  {/* Tooltip */}
                   <div className="absolute top-1/2 -translate-y-1/2 left-16
                                   bg-[hsl(var(--popover))] text-[hsl(var(--popover-foreground))]
                                   text-xs font-medium px-3 py-1.5 rounded-md shadow-md
@@ -229,7 +218,6 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
             })}
           </div>
 
-          {/* Floating Button */}
           <button
             onClick={handleShare}
             className={`relative flex items-center justify-center w-16 h-16 rounded-full shadow-2xl active:scale-95
