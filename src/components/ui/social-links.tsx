@@ -186,7 +186,7 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
               if (!style) return null;
               const Icon = style.icon;
               const shareUrl = getShareUrl(platform);
-              const isShareLink = platform !== 'instagram';
+              const isShareLink = ['linkedin', 'facebook', 'x', 'mail'].includes(platform);
 
               return (
                 <a
