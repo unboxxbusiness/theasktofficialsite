@@ -37,7 +37,7 @@ export const Navbar = () => {
     )}>
       <Link href="/" className="flex items-center gap-2">
         <Image src="https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png" alt="TheAskt Logo" width={120} height={30} className="dark:hidden" />
-        <Image src="https://res.cloudinary.com/dhrigocvd/image/upload/v1762930767/ask_foundation_final_logo2_tqznhh.png" alt="TheAskt Logo" width={120} height={30} className="hidden dark:block" />
+        <Image src="https://res.cloudinary.com/dhrigocvd/image/upload/v1763528756/logo_dark_mode_theaskt_xnbah7.webp" alt="TheAskt Logo" width={120} height={30} className="hidden dark:block" />
       </Link>
       
       {/* Desktop Navigation */}
@@ -73,7 +73,7 @@ export const Navbar = () => {
               <div className="flex items-center justify-between border-b px-6 py-4">
                  <Link href="/" className="flex items-center gap-2">
                     <Image src="https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png" alt="TheAskt Logo" width={120} height={30} className="dark:hidden" />
-                    <Image src="https://res.cloudinary.com/dhrigocvd/image/upload/v1762930767/ask_foundation_final_logo2_tqznhh.png" alt="TheAskt Logo" width={120} height={30} className="hidden dark:block" />
+                    <Image src="https://res.cloudinary.com/dhrigocvd/image/upload/v1763528756/logo_dark_mode_theaskt_xnbah7.webp" alt="TheAskt Logo" width={120} height={30} className="hidden dark:block" />
                 </Link>
                 <SheetClose asChild>
                    <Button variant="ghost" size="icon">
