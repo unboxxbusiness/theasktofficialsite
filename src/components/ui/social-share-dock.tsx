@@ -31,6 +31,20 @@ export const SocialShareDock = () => {
   const pathname = usePathname();
   const [pageUrl, setPageUrl] = useState("");
   const [socialLinks, setSocialLinks] = useState<DockItemData[]>([]);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     // This ensures window is defined, running only on the client
@@ -88,7 +102,10 @@ export const SocialShareDock = () => {
   }
 
   return (
-    <div className="fixed bottom-10 left-0 right-0 w-full flex justify-center z-50 pointer-events-none">
+    <div className={cn(
+        "fixed bottom-10 left-0 right-0 w-full flex justify-center z-50 pointer-events-none transition-opacity duration-300",
+        isVisible ? "opacity-100" : "opacity-0"
+    )}>
         <motion.div
             onMouseMove={(e) => mouseX.set(e.pageX)}
             onMouseLeave={() => mouseX.set(Infinity)}
