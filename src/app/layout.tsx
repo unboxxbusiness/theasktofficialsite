@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 import ScrollToTopButton from '@/components/ui/scroll-to-top-button';
 import SocialLinks, { SocialLink } from '@/components/ui/social-links';
-import { Analytics } from '@/components/analytics';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Navbar } from './pages/home/components/navbar';
+import { AnalyticsProvider } from '@/components/analytics-provider';
 
 const socialLinks: SocialLink[] = [
   { platform: 'linkedin', href: 'https://www.linkedin.com/company/theaskt' },
@@ -116,6 +116,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
+        <AnalyticsProvider />
       </head>
       <body className="font-body antialiased">
         <ThemeProvider
@@ -124,7 +125,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Analytics />
           <Navbar />
           <SocialLinks links={socialLinks} />
           {children}

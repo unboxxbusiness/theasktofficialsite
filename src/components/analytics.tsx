@@ -2,7 +2,7 @@
 
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
@@ -22,21 +22,16 @@ function pageview(url: string) {
 }
 
 export const Analytics = () => {
-  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
-  
-  useEffect(() => {
-    if (mounted && pathname) {
+    if (pathname) {
       pageview(pathname);
     }
-  }, [mounted, pathname, searchParams]);
+  }, [pathname, searchParams]);
 
-  if (!mounted || process.env.NODE_ENV !== "production" || !GTM_ID) {
+  if (process.env.NODE_ENV !== "production" || !GTM_ID) {
     return null;
   }
 
