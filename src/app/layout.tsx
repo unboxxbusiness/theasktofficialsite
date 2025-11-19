@@ -1,63 +1,58 @@
 
-'use client'
-
 import type { Metadata } from 'next';
 import './globals.css';
-import ScrollToTopButton from '@/components/ui/scroll-to-top-button';
-import { ThemeProvider } from '@/components/theme-provider';
-import { Navbar } from './pages/home/components/navbar';
 import { AnalyticsProvider } from '@/components/analytics-provider';
-import { ShareDialog } from '@/components/ui/share-dialog';
-import { useState, useEffect } from 'react';
+import { AppProviders } from '@/components/app-providers';
 
-// export const metadata: Metadata = {
-//   metadataBase: new URL('https://theaskt.org'),
-//   title: {
-//     default: 'TheAskt.org | Digital & AI Skills for Women in India',
-//     template: `%s | TheAskt.org`,
-//   },
-//   description: 'A public learning trust empowering women in India to restart careers and earn from home with practical digital and AI skills. Join our safe, supportive community.',
-//   keywords: ['women empowerment', 'digital skills India', 'AI training for women', 'career restart for women', 'financial independence', 'learn from home', 'Theaskt.org'],
-//   openGraph: {
-//     title: 'TheAskt.org | Digital & AI Skills for Women in India',
-//     description: 'A learning trust empowering women in India with skills to restart careers and earn from home.',
-//     url: 'https://theaskt.org',
-//     siteName: 'TheAskt.org',
-//     images: [
-//       {
-//         url: 'https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png',
-//         width: 1200,
-//         height: 630,
-//         alt: 'TheAskt.org Logo',
-//       },
-//     ],
-//     locale: 'en_US',
-//     type: 'website',
-//   },
-//   twitter: {
-//     card: 'summary_large_image',
-//     title: 'TheAskt.org | Digital & AI Skills for Women in India',
-//     description: 'Empowering women in India with digital and AI skills to restart careers and achieve financial independence.',
-//     creator: '@theaskt',
-//     images: ['https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png'],
-//   },
-//   robots: {
-//     index: true,
-//     follow: true,
-//     googleBot: {
-//       index: true,
-//       follow: true,
-//       'max-video-preview': -1,
-//       'max-image-preview': 'large',
-//       'max-snippet': -1,
-//     },
-//   },
-//   icons: {
-//     icon: 'https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png',
-//     shortcut: 'https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png',
-//     apple: 'https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png',
-//   },
-// };
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://theaskt.org'),
+  title: {
+    default: 'TheAskt.org | Digital & AI Skills for Women in India',
+    template: `%s | TheAskt.org`,
+  },
+  description: 'A public learning trust empowering women in India to restart careers and earn from home with practical digital and AI skills. Join our safe, supportive community.',
+  keywords: ['women empowerment', 'digital skills India', 'AI training for women', 'career restart for women', 'financial independence', 'learn from home', 'Theaskt.org'],
+  openGraph: {
+    title: 'TheAskt.org | Digital & AI Skills for Women in India',
+    description: 'A learning trust empowering women in India with skills to restart careers and earn from home.',
+    url: 'https://theaskt.org',
+    siteName: 'TheAskt.org',
+    images: [
+      {
+        url: 'https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png',
+        width: 1200,
+        height: 630,
+        alt: 'TheAskt.org Logo',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'TheAskt.org | Digital & AI Skills for Women in India',
+    description: 'Empowering women in India with digital and AI skills to restart careers and achieve financial independence.',
+    creator: '@theaskt',
+    images: ['https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  icons: {
+    icon: 'https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png',
+    shortcut: 'https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png',
+    apple: 'https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png',
+  },
+};
 
 
 export default function RootLayout({
@@ -65,35 +60,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [isShareDialogOpen, setShareDialogOpen] = useState(false);
-
-  useEffect(() => {
-    const showDialog = () => {
-      const hasBeenShown = sessionStorage.getItem('shareDialogShown');
-      if (hasBeenShown) {
-        window.removeEventListener('scroll', showDialog);
-        return;
-      }
-
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
-      
-      const scrollThreshold = (documentHeight - windowHeight) * 0.4;
-
-      if (scrollThreshold > 0 && scrollPosition > scrollThreshold) {
-        setShareDialogOpen(true);
-        sessionStorage.setItem('shareDialogShown', 'true');
-        window.removeEventListener('scroll', showDialog);
-      }
-    };
-    
-    window.addEventListener('scroll', showDialog, { passive: true });
-
-    // Cleanup
-    return () => window.removeEventListener('scroll', showDialog);
-  }, []);
-
+  
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -144,17 +111,9 @@ export default function RootLayout({
         <AnalyticsProvider />
       </head>
       <body className="font-body antialiased">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar />
+        <AppProviders>
           {children}
-          <ScrollToTopButton />
-          <ShareDialog isOpen={isShareDialogOpen} onClose={() => setShareDialogOpen(false)} />
-        </ThemeProvider>
+        </AppProviders>
       </body>
     </html>
   );
