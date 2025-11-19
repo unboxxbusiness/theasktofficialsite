@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
 import Link from 'next/link';
+import SocialShare from '@/components/ui/social-share';
 
 export default function Footer() {
     return (
@@ -34,12 +35,16 @@ export default function Footer() {
                     </div>
 
                     <div className="flex flex-col items-center md:items-start">
-                        <h3 className="mb-4 text-lg font-semibold">Social Media</h3>
+                        <h3 className="mb-4 text-lg font-semibold">Follow Us</h3>
                         <div className="flex space-x-4">
                             <Link href="https://www.youtube.com/@theaskt" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Youtube className="h-6 w-6" /></Link>
                             <Link href="https://www.instagram.com/the_askt/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Instagram className="h-6 w-6" /></Link>
                             <Link href="https://www.linkedin.com/company/theaskt" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Linkedin className="h-6 w-6" /></Link>
                             <Link href="https://www.facebook.com/theasktorg" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Facebook className="h-6 w-6" /></Link>
+                        </div>
+                        <div className="mt-6">
+                            <h3 className="mb-2 text-base font-semibold">Spread the Word</h3>
+                            <SocialShare />
                         </div>
                     </div>
                 </div>
