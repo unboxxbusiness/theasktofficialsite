@@ -67,7 +67,7 @@ export const ShareDialog: React.FC<ShareDialogProps> = ({
                 <X className="h-4 w-4" />
               </Button>
               <div className="mx-auto mb-6 flex h-32 w-32 items-center justify-center">
-                <img src="https://res.cloudinary.com/dhrigocvd/image/upload/v1763785149/undraw_social_sharing_re_pvmr_xkvqpr.svg" alt="Social sharing illustration" className="max-h-full max-w-full object-contain drop-shadow-[0_10px_15px_rgba(150,120,255,0.4)]" />
+                <img src="https://res.cloudinary.com/dhrigocvd/image/upload/v1763047330/theasktlogo_ujo9hi.png" alt="Theaskt.org Logo" className="max-h-full max-w-full object-contain" />
               </div>
               <h2 className="mb-2 flex items-center justify-center gap-2 text-2xl font-bold text-card-foreground">
                 <Share2 className="h-5 w-5 text-primary" />
