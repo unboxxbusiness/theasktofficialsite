@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { usePathname } from 'next/navigation';
 import { Share2, X } from "lucide-react";
 import {
   FaFacebook,
@@ -25,7 +26,7 @@ type Platform =
 
 export interface SocialLink {
   platform: Platform;
-  href: string;
+  href: string; // This will now be the base profile URL, not the share URL
 }
 
 export interface SocialLinksProps {
@@ -106,30 +107,60 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
   floatingButtonColor = "bg-primary",
 }) => {
   const [mobileDockOpen, setMobileDockOpen] = React.useState(false);
+  const pathname = usePathname();
+  const [pageUrl, setPageUrl] = React.useState("");
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      setPageUrl(window.location.origin + pathname);
+    }
+  }, [pathname]);
+
+  const shareData = {
+    title: "Theaskt.org | Empowering Women Across India",
+    text: "I found this incredible platform, Theaskt.org, that's empowering women in India with digital and AI skills to restart careers and earn from home. Join the movement!",
+  };
+
+  const getShareUrl = (platform: Platform) => {
+    const encodedUrl = encodeURIComponent(pageUrl);
+    const encodedTitle = encodeURIComponent(shareData.title);
+    const encodedText = encodeURIComponent(shareData.text);
+    const twitterText = encodeURIComponent(`${shareData.text} #WomenInTech #DigitalIndia #TheAskt`);
+
+    switch (platform) {
+      case "linkedin":
+        return `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}&summary=${encodedText}`;
+      case "facebook":
+        return `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+      case "x":
+        return `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${twitterText}`;
+      case "mail":
+        return `mailto:?subject=${encodedTitle}&body=${encodedText}%0A%0A${encodedUrl}`;
+      // Instagram doesn't have a direct web share link, so it will link to the profile.
+      case "instagram":
+        return links.find(l => l.platform === 'instagram')?.href || '#';
+      default:
+        return links.find(l => l.platform === platform)?.href || '#';
+    }
+  };
 
   const handleShare = async () => {
-    // 1. Check if Web Share API is supported
     if (navigator.share) {
       try {
-        // 2. Define the content to share
         await navigator.share({
-          title: "Theaskt.org | Empowering Women Across India",
-          text: "I found this incredible platform, Theaskt.org, that's empowering women in India with digital and AI skills to restart careers and earn from home. Join the movement!",
-          url: "https://theaskt.org",
+          title: shareData.title,
+          text: shareData.text,
+          url: pageUrl,
         });
       } catch (error) {
-        // This error is commonly thrown when the user cancels the share dialog.
-        // We check if it's an AbortError and, if so, we do nothing.
         if (error instanceof DOMException && error.name === 'AbortError') {
           // User cancelled the share sheet. Silently ignore.
         } else {
           console.error("Error sharing:", error);
-          // For other errors, fallback to opening the dock.
           setMobileDockOpen(!mobileDockOpen);
         }
       }
     } else {
-      // 3. Fallback for unsupported browsers
       setMobileDockOpen(!mobileDockOpen);
     }
   };
@@ -157,16 +188,21 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
                 : "opacity-0 translate-y-8 pointer-events-none"
             }`}
           >
-            {links.map(({ platform, href }, index) => {
+            {links.map(({ platform }, index) => {
               const style = PLATFORM_STYLES[platform];
               if (!style) return null;
               const Icon = style.icon;
+              const shareUrl = getShareUrl(platform);
+
+              // For Instagram, we can't share a link directly, so we just open the profile.
+              const isShareLink = platform !== 'instagram';
+
               return (
                 <a
                   key={platform}
-                  href={href}
+                  href={shareUrl}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="group relative mr-auto"
                   style={{
                     transitionDelay: mobileDockOpen ? `${index * 50}ms` : "0ms",
@@ -185,7 +221,7 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({
                                   bg-[hsl(var(--popover))] text-[hsl(var(--popover-foreground))]
                                   text-xs font-medium px-3 py-1.5 rounded-md shadow-md
                                   opacity-0 group-hover:opacity-100 transition-opacity">
-                    {style.label}
+                    {isShareLink ? `Share on ${style.label}` : `Follow on ${style.label}`}
                     <div className="absolute top-1/2 -translate-y-1/2 -left-1 w-2 h-2 bg-[hsl(var(--popover))] rotate-45" />
                   </div>
                 </a>
