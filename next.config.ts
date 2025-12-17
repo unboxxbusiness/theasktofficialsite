@@ -6,9 +6,6 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   images: {
     remotePatterns: [
       {
@@ -48,10 +45,6 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       }
     ],
-  },
-  webpack: (config, { isServer }) => {
-    // an empty webpack function can help resolve caching issues
-    return config;
   },
 };
 
